@@ -2,1780 +2,739 @@
 <html lang="zh-TW">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes" />
-  <title>開場千萬別說「我沒自信」：大學名師 30 年摸索出的 5 個上台分享準備心法 ｜ 大螢幕教學簡報</title>
-  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes, viewport-fit=cover" />
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+  <meta http-equiv="Pragma" content="no-cache" />
+  <meta http-equiv="Expires" content="0" />
+  <title>開場千萬別說「我沒自信」：大學名師 30 年摸索出的 5 個上台分享準備心法</title>
+
   <!-- SEO & Social Sharing -->
-  <meta name="description" content="日本大學民法教授木村老師近30年授課精華，彙整多位國際頂尖演講專家心法：從管理緊張、筆記預演、眼神盟友、拒絕自謙到有力終局定音與4大身心儀式。" />
-  <meta property="og:title" content="開場千萬別說「我沒自信」：5個上台分享準備心法教學簡報" />
-  <meta property="og:description" content="打造就算緊張也能從容開口的自己 ── 大螢幕專業教學簡報" />
+  <meta name="description" content="日本大學民法教授木村老師近 30 年授課精華，彙整多位國際頂尖演講專家心法：從管理緊張、筆記預演、眼神盟友、拒絕自謙到有力終局定音與4大身心儀式。" />
+  <meta property="og:title" content="開場千萬別說「我沒自信」：5個上台分享準備心法" />
+  <meta property="og:description" content="打造就算緊張也能從容開口的自己 ── 手機好讀版簡報" />
   <meta property="og:type" content="website" />
 
-  <!-- Reveal.js 5.1.0 CSS -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reset.css" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.css" />
-  
+  <!-- Swiper.js 11 & Tailwind CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;700;800&family=Noto+Sans+TC:wght@400;500;700;900&family=Noto+Serif+TC:wght@700;900&display=swap" rel="stylesheet" />
 
   <style>
-    /* ============================================================
-       0. CSS 變數與基礎設定 (大螢幕頂級高對比深藍奢華風)
-       ============================================================ */
-    :root {
-      --bg-dark: #070b14;
-      --bg-gradient: radial-gradient(circle at 50% 18%, #14213d 0%, #070b14 90%);
-      --surface-card: rgba(22, 33, 56, 0.78);
-      --surface-card-hover: rgba(30, 45, 78, 0.92);
-      --border-card: rgba(255, 255, 255, 0.12);
-      --border-gold: rgba(245, 158, 11, 0.45);
-      
-      --text-main: #f8fafc;
-      --text-sub: #cbd5e1;
-      --text-muted: #94a3b8;
-      
-      --gold-primary: #f59e0b;
-      --gold-light: #fbbf24;
-      --gold-gradient: linear-gradient(135deg, #fef08a 0%, #f59e0b 60%, #d97706 100%);
-      
-      --cyan-primary: #38bdf8;
-      --cyan-light: #7dd3fc;
-      --cyan-gradient: linear-gradient(135deg, #bae6fd 0%, #38bdf8 60%, #0284c7 100%);
-      
-      --green-primary: #10b981;
-      --green-light: #34d399;
-      --green-card: rgba(16, 185, 129, 0.14);
-      --green-border: rgba(52, 211, 153, 0.4);
-      
-      --red-primary: #f43f5e;
-      --red-light: #fb7185;
-      --red-card: rgba(244, 63, 94, 0.14);
-      --red-border: rgba(251, 113, 133, 0.4);
-      
-      --font-sans: 'Noto Sans TC', system-ui, -apple-system, sans-serif;
-      --font-serif: 'Noto Serif TC', serif;
-      --font-mono: 'JetBrains Mono', monospace;
-    }
-
     * {
       box-sizing: border-box;
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
+      -webkit-tap-highlight-color: transparent;
     }
 
     html, body {
-      background-color: var(--bg-dark);
-      background: var(--bg-gradient);
-      color: var(--text-main);
-      font-family: var(--font-sans);
+      height: 100%;
+      height: 100dvh;
       margin: 0;
       padding: 0;
-      width: 100%;
-      height: 100%;
+      background-color: #070a14;
+      color: #f8fafc;
+      font-family: 'Noto Sans TC', system-ui, -apple-system, sans-serif;
+      font-size: 16px;
       overflow: hidden;
     }
 
-    /* Reveal.js 核心畫布與文字覆寫 */
-    .reveal-viewport {
-      background: var(--bg-gradient) !important;
-    }
-    
-    .reveal {
-      font-family: var(--font-sans);
-      color: var(--text-main);
-      font-size: 26px;
-      font-weight: 400;
+    #app-container {
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+      height: 100dvh;
+      width: 100%;
+      overflow: hidden;
+      background-color: #070a14;
     }
 
-    .reveal .slides {
-      text-align: left;
+    /* 頂部 Header */
+    #main-header {
+      flex: 0 0 auto;
+      z-index: 50;
+      background: rgba(10, 15, 26, 0.95);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     }
 
-    .reveal .slides section {
-      padding: 40px 60px !important;
-      box-sizing: border-box !important;
+    /* 中間 Swiper 滿版內容區 */
+    #main-swiper-container {
+      flex: 1 1 auto;
       height: 100%;
-      display: flex !important;
-      flex-direction: column;
-      justify-content: flex-start;
-      align-items: stretch;
-    }
-
-    /* 標題設定 */
-    .reveal h1, .reveal h2, .reveal h3, .reveal h4 {
-      font-family: var(--font-serif);
-      color: var(--text-main);
-      margin: 0;
-      line-height: 1.25;
-      letter-spacing: -0.01em;
-      text-transform: none;
-    }
-
-    .gold-text {
-      background: var(--gold-gradient);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      display: inline-block;
-    }
-
-    .cyan-text {
-      background: var(--cyan-gradient);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      display: inline-block;
-    }
-
-    /* ============================================================
-       1. 大螢幕頂級卡片與佈局元件
-       ============================================================ */
-    .slide-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-end;
-      margin-bottom: 28px;
-      padding-bottom: 16px;
-      border-bottom: 1px solid var(--border-card);
-      flex-shrink: 0;
-    }
-
-    .slide-title-wrap {
-      display: flex;
-      flex-direction: column;
-      gap: 6px;
-    }
-
-    .slide-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      font-family: var(--font-mono);
-      font-size: 0.95rem;
-      font-weight: 700;
-      color: var(--gold-light);
-      background: rgba(245, 158, 11, 0.15);
-      border: 1px solid var(--border-gold);
-      padding: 4px 14px;
-      border-radius: 9999px;
-      width: fit-content;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-    }
-
-    .slide-title {
-      font-size: 2.85rem !important;
-      font-weight: 900;
-      color: #ffffff;
-      text-shadow: 0 4px 24px rgba(0, 0, 0, 0.6);
-    }
-
-    .slide-subtitle {
-      font-size: 1.25rem;
-      color: var(--text-muted);
-      font-weight: 500;
-    }
-
-    .slide-body {
-      flex: 1;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      gap: 24px;
       min-height: 0;
-    }
-
-    /* 玻璃擬態高質感卡片 */
-    .glass-card {
-      background: var(--surface-card);
-      backdrop-filter: blur(16px);
-      border: 1px solid var(--border-card);
-      border-radius: 18px;
-      padding: 28px 32px;
-      box-shadow: 0 12px 36px rgba(0, 0, 0, 0.35);
-      transition: all 0.3s ease;
       position: relative;
       overflow: hidden;
     }
 
-    .glass-card::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      height: 3px;
-      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.25), transparent);
-    }
-
-    .glass-card:hover {
-      background: var(--surface-card-hover);
-      border-color: rgba(255, 255, 255, 0.22);
-      transform: translateY(-2px);
-    }
-
-    /* 網格系統 */
-    .grid-2 {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 28px;
+    .swiper {
+      width: 100%;
       height: 100%;
     }
 
-    .grid-3 {
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
-      gap: 24px;
+    .swiper-slide {
+      display: flex;
+      flex-direction: column;
       height: 100%;
+      overflow: hidden;
+      background: radial-gradient(circle at 50% 12%, #18233f 0%, #070a14 85%);
     }
 
-    .grid-4 {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 20px;
+    /* 支援手機滑動與上下自然滾動 */
+    .slide-scroll-content {
+      height: 100%;
+      overflow-y: auto;
+      -webkit-overflow-scrolling: touch;
+      padding: 1.15rem 1rem 2rem 1rem;
     }
 
-    .grid-5 {
-      display: grid;
-      grid-template-columns: repeat(5, 1fr);
-      gap: 18px;
+    .slide-scroll-content::-webkit-scrollbar {
+      width: 4px;
+    }
+    .slide-scroll-content::-webkit-scrollbar-thumb {
+      background: rgba(245, 158, 11, 0.4);
+      border-radius: 6px;
     }
 
-    /* 數字編號巨型徽章 */
-    .big-num {
-      font-family: var(--font-mono);
-      font-size: 3.8rem;
-      font-weight: 900;
-      line-height: 1;
-      background: var(--gold-gradient);
+    /* 底部控制導覽列 */
+    #main-footer {
+      flex: 0 0 auto;
+      z-index: 50;
+      background: rgba(13, 19, 34, 0.98);
+      border-top: 1px solid rgba(255, 255, 255, 0.12);
+      padding: 0.55rem 1rem max(0.55rem, env(safe-area-inset-bottom)) 1rem;
+    }
+
+    /* 金黃漸層字體 */
+    .gold-gradient-text {
+      background: linear-gradient(135deg, #fef08a 0%, #f59e0b 55%, #d97706 100%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
-      margin-bottom: 8px;
+      display: inline-block;
     }
 
-    /* 引言高光框 */
-    .quote-box {
-      background: linear-gradient(135deg, rgba(245, 158, 11, 0.12) 0%, rgba(15, 23, 42, 0.6) 100%);
-      border-left: 6px solid var(--gold-primary);
-      border-radius: 0 16px 16px 0;
-      padding: 24px 32px;
-      font-size: 1.55rem;
-      line-height: 1.6;
-      color: #f1f5f9;
-      font-weight: 500;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    .cyan-gradient-text {
+      background: linear-gradient(135deg, #bae6fd 0%, #38bdf8 55%, #0284c7 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      display: inline-block;
+    }
+
+    /* 手機玻璃質感卡片 */
+    .card-glass {
+      background: rgba(26, 38, 64, 0.88);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      border-radius: 0.875rem;
     }
 
     /* 對比標籤盒 */
     .card-mistake {
-      background: var(--red-card);
-      border: 1px solid var(--red-border);
-      border-radius: 16px;
-      padding: 24px;
+      background: rgba(244, 63, 94, 0.12);
+      border: 1px solid rgba(251, 113, 133, 0.35);
+      border-radius: 0.875rem;
     }
 
     .card-success {
-      background: var(--green-card);
-      border: 1px solid var(--green-border);
-      border-radius: 16px;
-      padding: 24px;
+      background: rgba(16, 185, 129, 0.12);
+      border: 1px solid rgba(52, 211, 153, 0.35);
+      border-radius: 0.875rem;
     }
 
-    .badge-mistake {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      background: rgba(244, 63, 94, 0.25);
-      color: var(--red-light);
-      border: 1px solid var(--red-border);
-      padding: 4px 12px;
-      border-radius: 8px;
-      font-size: 0.95rem;
-      font-weight: 800;
-      margin-bottom: 12px;
+    /* 引用高光框 */
+    .quote-box {
+      background: linear-gradient(135deg, rgba(245, 158, 11, 0.12) 0%, rgba(15, 23, 42, 0.7) 100%);
+      border-left: 4px solid #f59e0b;
+      border-radius: 0 0.75rem 0.75rem 0;
+      padding: 0.875rem 1rem;
     }
 
-    .badge-success {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      background: rgba(16, 185, 129, 0.25);
-      color: var(--green-light);
-      border: 1px solid var(--green-border);
-      padding: 4px 12px;
-      border-radius: 8px;
-      font-size: 0.95rem;
-      font-weight: 800;
-      margin-bottom: 12px;
+    /* 分頁小圓點自訂 */
+    .swiper-pagination {
+      position: static !important;
+      margin-bottom: 0.35rem;
     }
-
-    /* 條目與清單 */
-    ul.check-list {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-      display: flex;
-      flex-direction: column;
-      gap: 16px;
+    .swiper-pagination-bullet {
+      background: rgba(255, 255, 255, 0.35);
+      opacity: 1;
+      width: 6px;
+      height: 6px;
+      transition: all 0.3s ease;
     }
-
-    ul.check-list li {
-      display: flex;
-      align-items: flex-start;
-      gap: 16px;
-      font-size: 1.35rem;
-      line-height: 1.55;
-      color: var(--text-sub);
-    }
-
-    ul.check-list li strong {
-      color: #ffffff;
-      font-weight: 700;
-    }
-
-    .check-icon {
-      flex-shrink: 0;
-      width: 28px;
-      height: 28px;
-      border-radius: 50%;
-      background: rgba(245, 158, 11, 0.2);
-      border: 1px solid var(--gold-primary);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: var(--gold-light);
-      font-size: 1rem;
-      font-weight: 900;
-      margin-top: 4px;
-    }
-
-    /* 專家觀點標籤條 */
-    .expert-bar {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      background: rgba(15, 23, 42, 0.8);
-      border: 1px solid rgba(255, 255, 255, 0.15);
-      padding: 10px 18px;
-      border-radius: 12px;
-      font-size: 1.05rem;
-      color: var(--text-sub);
-    }
-    
-    .expert-tag {
-      background: linear-gradient(135deg, #0284c7, #38bdf8);
-      color: #041226;
-      font-weight: 900;
-      font-size: 0.85rem;
-      padding: 3px 10px;
-      border-radius: 6px;
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-    }
-
-    /* ============================================================
-       2. 常駐導覽與專業演講者工具 (UI Top & Bottom Bars)
-       ============================================================ */
-    /* 頂部常駐懸浮列 */
-    #top-nav {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 60px;
-      background: rgba(7, 11, 20, 0.7);
-      backdrop-filter: blur(14px);
-      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-      z-index: 1000;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 0 28px;
-    }
-
-    .brand-title {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      font-family: var(--font-sans);
-      font-size: 1.05rem;
-      font-weight: 700;
-      color: #f1f5f9;
-      letter-spacing: 0.02em;
-    }
-
-    .brand-pill {
-      background: var(--gold-gradient);
-      color: #0b0f19;
-      font-weight: 900;
-      font-size: 0.75rem;
-      padding: 3px 10px;
-      border-radius: 6px;
-      letter-spacing: 0.05em;
-    }
-
-    .nav-actions {
-      display: flex;
-      align-items: center;
-      gap: 16px;
-    }
-
-    .nav-btn {
-      background: rgba(255, 255, 255, 0.08);
-      border: 1px solid rgba(255, 255, 255, 0.15);
-      color: #f8fafc;
-      padding: 6px 14px;
-      border-radius: 8px;
-      font-size: 0.95rem;
-      font-weight: 600;
-      cursor: pointer;
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      transition: all 0.2s ease;
-      font-family: var(--font-sans);
-    }
-
-    .nav-btn:hover {
-      background: rgba(255, 255, 255, 0.18);
-      border-color: var(--gold-light);
-      color: var(--gold-light);
-    }
-
-    /* 演講者計時器膠囊 */
-    #timer-capsule {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      background: rgba(15, 23, 42, 0.9);
-      border: 1px solid var(--border-gold);
-      padding: 4px 14px;
-      border-radius: 9999px;
-      font-family: var(--font-mono);
-      font-size: 1.1rem;
-      font-weight: 800;
-      color: var(--gold-light);
-    }
-
-    .timer-btn {
-      background: none;
-      border: none;
-      color: var(--text-muted);
-      cursor: pointer;
-      font-size: 0.9rem;
-      padding: 0 4px;
-      transition: color 0.2s;
-    }
-    .timer-btn:hover { color: #ffffff; }
-
-    /* 目錄抽屜 (Slide Drawer) */
-    #chapter-drawer {
-      position: fixed;
-      top: 60px;
-      left: -380px;
-      width: 360px;
-      height: calc(100vh - 60px);
-      background: rgba(11, 16, 28, 0.95);
-      backdrop-filter: blur(20px);
-      border-right: 1px solid rgba(255, 255, 255, 0.15);
-      z-index: 999;
-      transition: left 0.35s cubic-bezier(0.16, 1, 0.3, 1);
-      padding: 24px;
-      overflow-y: auto;
-      box-shadow: 20px 0 50px rgba(0, 0, 0, 0.6);
-    }
-
-    #chapter-drawer.open {
-      left: 0;
-    }
-
-    .drawer-title {
-      font-family: var(--font-serif);
-      font-size: 1.35rem;
-      font-weight: 900;
-      color: var(--gold-light);
-      margin-bottom: 20px;
-      padding-bottom: 12px;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    }
-
-    .chapter-list {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-      display: flex;
-      flex-direction: column;
-      gap: 8px;
-    }
-
-    .chapter-item {
-      padding: 10px 14px;
-      border-radius: 8px;
-      font-size: 0.95rem;
-      color: var(--text-sub);
-      cursor: pointer;
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      transition: all 0.2s ease;
-      background: rgba(255, 255, 255, 0.03);
-    }
-
-    .chapter-item:hover, .chapter-item.active {
-      background: rgba(245, 158, 11, 0.15);
-      color: var(--gold-light);
-      border-left: 3px solid var(--gold-primary);
-    }
-
-    .chapter-num {
-      font-family: var(--font-mono);
-      font-weight: 800;
-      color: var(--text-muted);
-      font-size: 0.85rem;
-    }
-
-    /* 快捷鍵提示 Modal */
-    #help-modal {
-      display: none;
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(0, 0, 0, 0.75);
-      backdrop-filter: blur(10px);
-      z-index: 2000;
-      justify-content: center;
-      align-items: center;
-    }
-
-    #help-modal.open { display: flex; }
-
-    .help-card {
-      background: #0f172a;
-      border: 1px solid var(--border-gold);
-      border-radius: 20px;
-      padding: 36px 44px;
-      max-width: 600px;
-      width: 90%;
-      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.8);
-    }
-
-    .key-badge {
-      font-family: var(--font-mono);
-      background: rgba(255, 255, 255, 0.12);
-      border: 1px solid rgba(255, 255, 255, 0.25);
-      color: var(--gold-light);
-      padding: 3px 10px;
-      border-radius: 6px;
-      font-size: 0.95rem;
-      font-weight: 700;
-    }
-
-    /* Reveal 控制按鈕與進度條自訂 */
-    .reveal .progress {
-      height: 6px !important;
-      background: rgba(255, 255, 255, 0.1) !important;
-      color: var(--gold-primary) !important;
-    }
-    
-    .reveal .progress span {
-      background: var(--gold-gradient) !important;
-    }
-
-    .reveal .controls {
-      color: var(--gold-light) !important;
-    }
-
-    .reveal .slide-number {
-      background: rgba(15, 23, 42, 0.85) !important;
-      color: var(--gold-light) !important;
-      font-family: var(--font-mono) !important;
-      font-size: 1.1rem !important;
-      font-weight: 800 !important;
-      padding: 8px 18px !important;
-      border-radius: 9999px !important;
-      border: 1px solid var(--border-gold) !important;
-      bottom: 24px !important;
-      right: 28px !important;
-    }
-
-    /* 簡報專用大型標記徽章 */
-    .highlight-pill {
-      color: var(--gold-light);
-      font-weight: 700;
-      border-bottom: 2px solid var(--gold-primary);
-      padding-bottom: 2px;
-    }
-
-    .tag-source {
-      position: absolute;
-      bottom: 20px;
-      left: 60px;
-      font-size: 0.95rem;
-      color: var(--text-muted);
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
-
-    /* 大螢幕表格樣式 */
-    .speech-table {
-      width: 100%;
-      border-collapse: separate;
-      border-spacing: 0 12px;
-      margin-top: 8px;
-    }
-
-    .speech-table th {
-      font-family: var(--font-serif);
-      font-size: 1.25rem;
-      font-weight: 700;
-      color: var(--text-sub);
-      padding: 12px 20px;
-      text-align: left;
-      border-bottom: 2px solid rgba(255, 255, 255, 0.15);
-    }
-
-    .speech-table td {
-      padding: 20px 24px;
-      font-size: 1.25rem;
-      line-height: 1.5;
-      background: rgba(20, 30, 52, 0.65);
-      border-top: 1px solid rgba(255, 255, 255, 0.08);
-      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-    }
-
-    .speech-table tr td:first-child {
-      border-radius: 12px 0 0 12px;
-      border-left: 1px solid rgba(255, 255, 255, 0.08);
-      font-weight: 800;
-      color: #ffffff;
-      width: 16%;
-    }
-
-    .speech-table tr td:last-child {
-      border-radius: 0 12px 12px 0;
-      border-right: 1px solid rgba(255, 255, 255, 0.08);
-    }
-
-    .speech-table tr:hover td {
-      background: rgba(30, 45, 78, 0.85);
+    .swiper-pagination-bullet-active {
+      background: #f59e0b !important;
+      width: 18px;
+      border-radius: 4px;
     }
   </style>
 </head>
 <body>
-
-  <!-- ============================================================
-       常駐頂部導覽控制列 (大螢幕授課 / 演講專用)
-       ============================================================ -->
-  <header id="top-nav">
-    <div class="brand-title">
-      <button id="btn-toggle-drawer" class="nav-btn" title="切換投影片目錄 [M]">
-        <span>☰</span> 目錄
-      </button>
-      <span class="brand-pill">公眾演說・實戰教學</span>
-      <span style="color: var(--text-sub); font-size: 0.95rem;">開場千萬別說「我沒自信」</span>
-    </div>
-
-    <div class="nav-actions">
-      <!-- 演講者計時器 -->
-      <div id="timer-capsule" title="演講計時器 [T 開關]">
-        <span>⏱️</span>
-        <span id="timer-display">00:00</span>
-        <button id="btn-timer-start" class="timer-btn" title="開始/暫停">▶</button>
-        <button id="btn-timer-reset" class="timer-btn" title="重設">↺</button>
-      </div>
-
-      <!-- 快捷鍵說明 -->
-      <button id="btn-show-help" class="nav-btn" title="按鍵指南 [?]">
-        <span>⌨️</span> 快捷鍵
-      </button>
-
-      <!-- 全螢幕切換 -->
-      <button id="btn-toggle-fullscreen" class="nav-btn" title="全螢幕放映 [F]">
-        <span>⛶</span> 全螢幕
-      </button>
-    </div>
-  </header>
-
-  <!-- ============================================================
-       章節快速跳轉抽屜 (Slide Drawer)
-       ============================================================ -->
-  <nav id="chapter-drawer" aria-label="投影片章節目錄">
-    <div class="drawer-title">📌 簡報章節目錄</div>
-    <ul class="chapter-list">
-      <li class="chapter-item" data-slide="0"><span class="chapter-num">01</span> 封面：5 個上台準備心法</li>
-      <li class="chapter-item" data-slide="1"><span class="chapter-num">02</span> 核心思維：消除緊張 vs 管理緊張</li>
-      <li class="chapter-item" data-slide="2"><span class="chapter-num">03</span> 全景架構：30 年淬鍊 5 大心法</li>
-      <li class="chapter-item" data-slide="3"><span class="chapter-num">04</span> 心法一：筆記做足，推演提問與意外</li>
-      <li class="chapter-item" data-slide="4"><span class="chapter-num">05</span> 心法二：腦中預演，鎖定黃金第一句</li>
-      <li class="chapter-item" data-slide="5"><span class="chapter-num">06</span> 心法三：在台下找到一位「盟友」</li>
-      <li class="chapter-item" data-slide="6"><span class="chapter-num">07</span> 心法四：開場絕不說「我沒自信」</li>
-      <li class="chapter-item" data-slide="7"><span class="chapter-num">08</span> 心法五：終局定音，鎖定核心帶走點</li>
-      <li class="chapter-item" data-slide="8"><span class="chapter-num">09</span> 身心儀式：4 大登台前神經調節法</li>
-      <li class="chapter-item" data-slide="9"><span class="chapter-num">10</span> 話術對照：地雷話術 vs 卓越示範</li>
-      <li class="chapter-item" data-slide="10"><span class="chapter-num">11</span> 實戰清單：上台前倒數檢核表</li>
-      <li class="chapter-item" data-slide="11"><span class="chapter-num">12</span> 終局金句：帶著底氣勇敢開口！</li>
-    </ul>
-  </nav>
-
-  <!-- ============================================================
-       快捷鍵指南彈窗 (Help Modal)
-       ============================================================ -->
-  <div id="help-modal">
-    <div class="help-card">
-      <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:24px;">
-        <h3 style="font-size:1.8rem; color:var(--gold-light);">⌨️ 大螢幕演講操作指南</h3>
-        <button id="btn-close-help" style="background:none; border:none; color:#fff; font-size:1.8rem; cursor:pointer;">×</button>
-      </div>
-      <div style="display:grid; grid-template-columns:1fr 1fr; gap:16px; font-size:1.15rem; line-height:1.8;">
-        <div><span class="key-badge">Space</span> / <span class="key-badge">→</span> 下一張</div>
-        <div><span class="key-badge">←</span> / <span class="key-badge">Backspace</span> 上一張</div>
-        <div><span class="key-badge">F</span> 進入 / 退出全螢幕</div>
-        <div><span class="key-badge">ESC</span> / <span class="key-badge">O</span> 簡報九宮格總覽</div>
-        <div><span class="key-badge">M</span> 開啟 / 關閉目錄抽屜</div>
-        <div><span class="key-badge">T</span> 啟動 / 暫停講者計時器</div>
-        <div><span class="key-badge">Home</span> / <span class="key-badge">End</span> 首頁 / 尾頁</div>
-        <div><span class="key-badge">?</span> 顯示本快捷鍵視窗</div>
-      </div>
-      <div style="margin-top:24px; padding-top:16px; border-top:1px solid rgba(255,255,255,0.1); font-size:0.95rem; color:var(--text-muted); text-align:center;">
-        支援實體簡報筆（PageUp / PageDown / 左右方向鍵）流暢切頁
-      </div>
-    </div>
-  </div>
-
-  <!-- ============================================================
-       REVEAL.JS 核心簡報內容 (1920x1080 滿版大螢幕排版)
-       ============================================================ -->
-  <div class="reveal">
-    <div class="slides">
-
-      <!-- ============================================================
-           SLIDE 1: 封面
-           ============================================================ -->
-      <section data-state="slide-0" style="justify-content: center; align-items: center; text-align: center;">
-        <div style="max-width: 1400px; margin: 0 auto; display: flex; flex-direction: column; align-items: center; gap: 28px;">
-          
-          <div class="slide-badge">
-            <span>🎓</span> 大學名師 30 年淬鍊 ｜ 公眾演說與簡報心法實戰指南
-          </div>
-
-          <h1 style="font-size: 4.4rem; font-weight: 900; line-height: 1.18; text-shadow: 0 10px 40px rgba(0,0,0,0.8);">
-            開場千萬別說<span class="gold-text">「我沒自信」</span>
-          </h1>
-
-          <p style="font-size: 2.1rem; color: var(--text-sub); font-weight: 500; margin: 0; max-width: 1100px; line-height: 1.4;">
-            打造<strong style="color: #ffffff;">即使緊張也能從容開口</strong>的自己：面對 1,000 人大講堂的 5 個上台準備心法
-          </p>
-
-          <div style="display: flex; gap: 16px; flex-wrap: wrap; justify-content: center; margin-top: 10px;">
-            <div class="expert-bar"><span class="expert-tag">30年老將</span> 木村教授（日本大學民法教授）</div>
-            <div class="expert-bar"><span class="expert-tag">個人品牌</span> William Arruda</div>
-            <div class="expert-bar"><span class="expert-tag">抗壓教練</span> Jordan Friedman</div>
-            <div class="expert-bar"><span class="expert-tag">演說教練</span> Gina Rapaport</div>
-          </div>
-
-          <div class="quote-box" style="margin-top: 16px; font-size: 1.4rem; max-width: 1050px; text-align: left;">
-            💡 <strong>核心心法</strong>：周全準備的目的，絕不是保證現場零意外；而是建立強大底氣 ── <strong>「就算出了意外，憑我扎實累積的準備與知識，也絕對應付得來！」</strong>
-          </div>
-
-          <div style="margin-top: 20px; font-size: 1.05rem; color: var(--text-muted); display: flex; gap: 24px; align-items: center;">
-            <span>按 <strong style="color:var(--gold-light);">[Space]</strong> 或 <strong style="color:var(--gold-light);">[→]</strong> 開始教學</span>
-            <span>•</span>
-            <span>按 <strong style="color:var(--gold-light);">[F]</strong> 進入全螢幕放映</span>
-          </div>
-
-        </div>
-      </section>
-
-      <!-- ============================================================
-           SLIDE 2: 核心思維逆轉：從「消除緊張」到「管理緊張」
-           ============================================================ -->
-      <section data-state="slide-1">
-        <div class="slide-header">
-          <div class="slide-title-wrap">
-            <span class="slide-badge">SECTION 01 ・ 思維底層邏輯</span>
-            <h2 class="slide-title">從「消除緊張」到<span class="gold-text">「管理緊張」</span></h2>
-          </div>
-          <div class="slide-subtitle">面對生理本能的認知翻轉</div>
-        </div>
-
-        <div class="slide-body">
-          <div class="grid-2">
-            <!-- 左欄：迷思破解 -->
-            <div class="glass-card" style="display: flex; flex-direction: column; justify-content: space-between;">
-              <div>
-                <span class="badge-mistake">❌ 傳統致命迷思</span>
-                <h3 style="font-size: 2.1rem; color: #ffffff; margin-bottom: 16px;">「優秀講者上台都不會緊張」</h3>
-                <ul class="check-list">
-                  <li>
-                    <span class="check-icon" style="border-color: var(--red-primary); color: var(--red-light); background: rgba(244,63,94,0.15);">✕</span>
-                    <div>
-                      <strong>緊張是生物生存本能</strong><br>
-                      面對數百乃至上千雙眼睛凝視，交感神經必然興奮、心跳加速，這是正常的生理機制，<span style="color:var(--red-light);">絕非能力缺陷</span>。
-                    </div>
-                  </li>
-                  <li>
-                    <span class="check-icon" style="border-color: var(--red-primary); color: var(--red-light); background: rgba(244,63,94,0.15);">✕</span>
-                    <div>
-                      <strong>越想消滅它，越被它吞噬</strong><br>
-                      把力氣花在「壓抑緊張」，反而會把大腦認知資源耗盡，導致開場腦袋一片空白、肢體僵硬。
-                    </div>
-                  </li>
-                </ul>
-              </div>
-              <div style="background: rgba(15,23,42,0.6); padding: 16px; border-radius: 12px; font-size: 1.15rem; color: var(--text-muted);">
-                📌 木村教授實證：執教近 30 年、每堂 400～1,000 名學生，至今每次推開講堂大門依然會心跳加速！
-              </div>
-            </div>
-
-            <!-- 右欄：卓越講者的底層邏輯 -->
-            <div class="glass-card" style="display: flex; flex-direction: column; justify-content: space-between; border-color: var(--border-gold);">
-              <div>
-                <span class="badge-success">⭕ 卓越講者心法</span>
-                <h3 style="font-size: 2.1rem; color: #ffffff; margin-bottom: 16px;">「管理緊張，以周全累積篤定底氣」</h3>
-                <ul class="check-list">
-                  <li>
-                    <span class="check-icon">✓</span>
-                    <div>
-                      <strong>將生理激動轉換為講台能量</strong><br>
-                      將心跳加速詮釋為「身體正在調動全身感官與爆發力」，讓這股動能轉化為聲音的穿透力與熱情。
-                    </div>
-                  </li>
-                  <li>
-                    <span class="check-icon">✓</span>
-                    <div>
-                      <strong>用充足準備徹底終結僥倖心理</strong><br>
-                      當你在紙上、在腦中已經完整推演過整個流程，內在自然會萌生<span class="highlight-pill">「做到這種程度，一定沒問題」</span>的平靜力量。
-                    </div>
-                  </li>
-                </ul>
-              </div>
-
-              <div class="quote-box" style="font-size: 1.35rem; padding: 18px 24px;">
-                🔑 <strong>本質提煉</strong>：準備的意義，不是追求「毫無意外」；而是<strong>「就算出現意料之外，我也有十足把握應付得來！」</strong>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- ============================================================
-           SLIDE 3: 5 大上台心法全景矩陣
-           ============================================================ -->
-      <section data-state="slide-2">
-        <div class="slide-header">
-          <div class="slide-title-wrap">
-            <span class="slide-badge">SECTION 02 ・ 全景架構</span>
-            <h2 class="slide-title">大學名師 30 年淬鍊的<span class="gold-text"> 5 大準備心法</span></h2>
-          </div>
-          <div class="slide-subtitle">打造從容開口的系統化行動藍圖</div>
-        </div>
-
-        <div class="slide-body">
-          <div class="grid-5" style="height: 100%;">
-            
-            <!-- 心法 1 -->
-            <div class="glass-card" style="display: flex; flex-direction: column; justify-content: space-between;">
-              <div>
-                <div class="big-num">01</div>
-                <h3 style="font-size: 1.7rem; color: #ffffff; margin-bottom: 12px; font-weight: 800;">筆記做足</h3>
-                <div style="font-size: 1.15rem; color: var(--gold-light); font-weight: 700; margin-bottom: 14px;">預演細節與提問</div>
-                <p style="font-size: 1.05rem; line-height: 1.6; color: var(--text-sub); margin: 0;">
-                  寫下講什麼、順序、講到哪裡。規劃板書要點，並預先列出 3～5 個現場棘手難題。
-                </p>
-              </div>
-              <div style="border-top: 1px solid rgba(255,255,255,0.1); padding-top: 12px; font-size: 0.95rem; color: var(--text-muted);">
-                🎯 化解「怎麼辦」的未知恐懼
-              </div>
-            </div>
-
-            <!-- 心法 2 -->
-            <div class="glass-card" style="display: flex; flex-direction: column; justify-content: space-between;">
-              <div>
-                <div class="big-num">02</div>
-                <h3 style="font-size: 1.7rem; color: #ffffff; margin-bottom: 12px; font-weight: 800;">腦中預演</h3>
-                <div style="font-size: 1.15rem; color: var(--gold-light); font-weight: 700; margin-bottom: 14px;">敲定最初 30 秒</div>
-                <p style="font-size: 1.05rem; line-height: 1.6; color: var(--text-sub); margin: 0;">
-                  像放電影般在腦海中走完全程。第一句話字字確立並大聲出聲練習，以篤定氣勢帶動整場。
-                </p>
-              </div>
-              <div style="border-top: 1px solid rgba(255,255,255,0.1); padding-top: 12px; font-size: 0.95rem; color: var(--text-muted);">
-                🎯 最初 30 秒決定全場氣場
-              </div>
-            </div>
-
-            <!-- 心法 3 -->
-            <div class="glass-card" style="display: flex; flex-direction: column; justify-content: space-between;">
-              <div>
-                <div class="big-num">03</div>
-                <h3 style="font-size: 1.7rem; color: #ffffff; margin-bottom: 12px; font-weight: 800;">尋找盟友</h3>
-                <div style="font-size: 1.15rem; color: var(--gold-light); font-weight: 700; margin-bottom: 14px;">台下眼神錨定</div>
-                <p style="font-size: 1.05rem; line-height: 1.6; color: var(--text-sub); margin: 0;">
-                  鎖定頻頻點頭、微笑回應的人。登台前先找 2～3 位聽眾微對話，提醒大腦「台下都是朋友」。
-                </p>
-              </div>
-              <div style="border-top: 1px solid rgba(255,255,255,0.1); padding-top: 12px; font-size: 0.95rem; color: var(--text-muted);">
-                🎯 一個認真點頭，信心倍增
-              </div>
-            </div>
-
-            <!-- 心法 4 -->
-            <div class="glass-card" style="display: flex; flex-direction: column; justify-content: space-between;">
-              <div>
-                <div class="big-num">04</div>
-                <h3 style="font-size: 1.7rem; color: #ffffff; margin-bottom: 12px; font-weight: 800;">拒絕自謙</h3>
-                <div style="font-size: 1.15rem; color: var(--gold-light); font-weight: 700; margin-bottom: 14px;">開場絕不說沒自信</div>
-                <p style="font-size: 1.05rem; line-height: 1.6; color: var(--text-sub); margin: 0;">
-                  過度謙虛等同自毀專業形象。改用肯定句展現價值，登台前向自己喊話：「這場分享極具價值！」
-                </p>
-              </div>
-              <div style="border-top: 1px solid rgba(255,255,255,0.1); padding-top: 12px; font-size: 0.95rem; color: var(--text-muted);">
-                🎯 業務原則：展現價值才獲信任
-              </div>
-            </div>
-
-            <!-- 心法 5 -->
-            <div class="glass-card" style="display: flex; flex-direction: column; justify-content: space-between;">
-              <div>
-                <div class="big-num">05</div>
-                <h3 style="font-size: 1.7rem; color: #ffffff; margin-bottom: 12px; font-weight: 800;">終局定音</h3>
-                <div style="font-size: 1.15rem; color: var(--gold-light); font-weight: 700; margin-bottom: 14px;">有力金句熱情收尾</div>
-                <p style="font-size: 1.05rem; line-height: 1.6; color: var(--text-sub); margin: 0;">
-                  拒絕「呃……以上」草草結束。濃縮核心 Takeaway，明確給出走出會場明天就能執行的行動。
-                </p>
-              </div>
-              <div style="border-top: 1px solid rgba(255,255,255,0.1); padding-top: 12px; font-size: 0.95rem; color: var(--text-muted);">
-                🎯 讓聽眾滿載收穫離場
-              </div>
-            </div>
-
-          </div>
-        </div>
-      </section>
-
-      <!-- ============================================================
-           SLIDE 4: 心法一：把筆記做足，連可能的提問都先想好
-           ============================================================ -->
-      <section data-state="slide-3">
-        <div class="slide-header">
-          <div class="slide-title-wrap">
-            <span class="slide-badge">PILLAR 01 ・ 扎實準備</span>
-            <h2 class="slide-title">把筆記做足：<span class="gold-text">連可能的提問都先想好</span></h2>
-          </div>
-          <div class="slide-subtitle">在大腦與紙本上預演所有未知</div>
-        </div>
-
-        <div class="slide-body">
-          <div class="grid-2">
-            <!-- 左欄：結構化授課筆記 3 要素 -->
-            <div class="glass-card" style="display: flex; flex-direction: column; justify-content: space-between;">
-              <div>
-                <h3 style="font-size: 2.1rem; color: var(--gold-light); margin-bottom: 20px;">
-                  📝 結構化授課筆記三核心
-                </h3>
-                <ul class="check-list">
-                  <li>
-                    <span class="check-icon">1</span>
-                    <div>
-                      <strong>具體脈絡定義</strong><br>
-                      清楚白紙黑字寫下：<span class="highlight-pill">要講什麼、按什麼順序講、講到哪裡為止</span>。設定清楚的時間里程碑。
-                    </div>
-                  </li>
-                  <li>
-                    <span class="check-icon">2</span>
-                    <div>
-                      <strong>板書與投影片語句對應</strong><br>
-                      預先規劃投影片跳轉時的「關鍵過場詞」，以及在白板上寫字時該如何保持與學生的口語互動。
-                    </div>
-                  </li>
-                  <li>
-                    <span class="check-icon">3</span>
-                    <div>
-                      <strong>提前列出 3～5 個棘手提問</strong><br>
-                      模擬台下最專業、最具批判性的聽眾會問什麼。先查好數據、想好切入視角與應答邏輯。
-                    </div>
-                  </li>
-                </ul>
-              </div>
-
-              <div style="background: rgba(15,23,42,0.6); padding: 16px 20px; border-radius: 12px; font-size: 1.15rem; color: var(--cyan-light);">
-                💡 <strong>名師密技</strong>：筆記不是整篇逐字稿，而是<strong>「路標式心智圖」</strong>，指引大腦始終維持在主幹道上。
-              </div>
-            </div>
-
-            <!-- 右欄：心理學與生理效應 -->
-            <div class="glass-card" style="display: flex; flex-direction: column; justify-content: space-between;">
-              <div>
-                <h3 style="font-size: 2.1rem; color: #ffffff; margin-bottom: 20px;">
-                  🧠 化解「怎麼辦」的不安感
-                </h3>
-                
-                <div style="display: flex; flex-direction: column; gap: 20px;">
-                  <div style="background: rgba(255,255,255,0.05); padding: 20px; border-radius: 14px; border-left: 4px solid var(--cyan-primary);">
-                    <div style="font-size: 1.3rem; font-weight: 700; color: #ffffff; margin-bottom: 6px;">未知感降至最低</div>
-                    <div style="font-size: 1.15rem; line-height: 1.6; color: var(--text-sub);">
-                      人類大腦對「未知與突發」最容易產生恐慌。當所有環節已在紙上走過一遍，大腦會將當下情境判定為<strong>「已知經驗」</strong>，焦慮感瞬間釋放。
-                    </div>
-                  </div>
-
-                  <div style="background: rgba(255,255,255,0.05); padding: 20px; border-radius: 14px; border-left: 4px solid var(--gold-primary);">
-                    <div style="font-size: 1.3rem; font-weight: 700; color: #ffffff; margin-bottom: 6px;">脫軌也能游刃有餘</div>
-                    <div style="font-size: 1.15rem; line-height: 1.6; color: var(--text-sub);">
-                      即使現場學員提問天馬行空、討論偏離預期，因為你手握完整的結構藍圖，隨時能優雅地以一句過場<strong>「扣回今天核心主軸」</strong>。
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div class="quote-box" style="font-size: 1.3rem; padding: 18px 24px; margin-top: 16px;">
-                💬 「你在書桌前流的汗越多，在講台上流的冷汗就越少！」
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- ============================================================
-           SLIDE 5: 心法二：在腦中完整預演一遍，先決定好第一句話
-           ============================================================ -->
-      <section data-state="slide-4">
-        <div class="slide-header">
-          <div class="slide-title-wrap">
-            <span class="slide-badge">PILLAR 02 ・ 心理預演</span>
-            <h2 class="slide-title">在腦中完整預演：<span class="gold-text">敲定最初 30 秒第一句話</span></h2>
-          </div>
-          <div class="slide-subtitle">想像訓練與發聲練習的神經科學</div>
-        </div>
-
-        <div class="slide-body">
-          <div class="grid-3">
-            
-            <!-- 卡片 1: 想像訓練 -->
-            <div class="glass-card" style="display: flex; flex-direction: column; justify-content: space-between;">
-              <div>
-                <span class="slide-badge" style="font-size:0.85rem; margin-bottom:12px;">STEP 1</span>
-                <h3 style="font-size: 1.85rem; color: #ffffff; margin-bottom: 14px;">想像訓練<br><span style="font-size:1.2rem; color:var(--text-muted);">(Mental Rehearsal)</span></h3>
-                <p style="font-size: 1.15rem; line-height: 1.6; color: var(--text-sub);">
-                  閉上雙眼，像放高畫質電影般走完 7 步微電影：
-                </p>
-                <div style="display:flex; flex-direction:column; gap:8px; margin-top:14px; font-size:1.05rem; color:var(--cyan-light);">
-                  <div>① 走進會場 → ② 環視聽眾</div>
-                  <div>③ 站定深呼吸 → ④ 篤定開口</div>
-                  <div>⑤ 展開主題 → ⑥ 穿插生動案例</div>
-                  <div>⑦ 滿堂喝采完美收尾</div>
-                </div>
-              </div>
-              <div style="font-size: 0.95rem; color: var(--text-muted); border-top: 1px solid rgba(255,255,255,0.1); padding-top: 12px;">
-                💡 頂級運動員與太空人通用的心理技術
-              </div>
-            </div>
-
-            <!-- 卡片 2: 敲定第一句 -->
-            <div class="glass-card" style="display: flex; flex-direction: column; justify-content: space-between; border-color: var(--border-gold);">
-              <div>
-                <span class="slide-badge" style="font-size:0.85rem; margin-bottom:12px;">STEP 2</span>
-                <h3 style="font-size: 1.85rem; color: var(--gold-light); margin-bottom: 14px;">抓住最初 30 秒<br><span style="font-size:1.2rem; color:var(--text-muted);">(The Golden 30s)</span></h3>
-                <p style="font-size: 1.15rem; line-height: 1.6; color: var(--text-sub);">
-                  剛登台時最易慌亂，因此<strong>「第一句話」必須字字確立、不可臨場發揮</strong>！
-                </p>
-                <div style="background: rgba(245,158,11,0.12); padding: 16px; border-radius: 12px; margin-top: 14px; border-left: 3px solid var(--gold-primary);">
-                  <strong style="color:#ffffff; font-size:1.15rem;">第一句宏亮篤定：</strong><br>
-                  只要第一句說得鏗鏘有力，身體會順勢進入「主場戰鬥狀態」，那股氣勢會自然帶動整場演講節奏。
-                </div>
-              </div>
-              <div style="font-size: 0.95rem; color: var(--gold-light); border-top: 1px solid rgba(255,255,255,0.1); padding-top: 12px;">
-                ⭐ 第一句話是整場演說的定海神針
-              </div>
-            </div>
-
-            <!-- 卡片 3: William Arruda 專家加碼 -->
-            <div class="glass-card" style="display: flex; flex-direction: column; justify-content: space-between;">
-              <div>
-                <span class="slide-badge" style="font-size:0.85rem; margin-bottom:12px;">EXPERT TIPS</span>
-                <h3 style="font-size: 1.85rem; color: #ffffff; margin-bottom: 14px;">William Arruda<br><span style="font-size:1.2rem; color:var(--cyan-light);">國際個人品牌大師加碼</span></h3>
-                <ul class="check-list" style="gap: 12px;">
-                  <li style="font-size: 1.1rem;">
-                    <span class="check-icon" style="width:22px; height:22px; font-size:0.8rem;">🗣️</span>
-                    <div>
-                      <strong>練習一定要「出聲」！</strong><br>
-                      默讀與發聲的大腦神經迴路完全不同。親耳聽見發音，能建立口語肌肉記憶。
-                    </div>
-                  </li>
-                  <li style="font-size: 1.1rem;">
-                    <span class="check-icon" style="width:22px; height:22px; font-size:0.8rem;">⚖️</span>
-                    <div>
-                      <strong>熟練創造餘裕，但勿排練過頭</strong><br>
-                      滾瓜爛熟能騰出心力觀察台下；但保留呼吸感，避免死記硬背失去真誠臨場感。
-                    </div>
-                  </li>
-                </ul>
-              </div>
-              <div style="font-size: 0.95rem; color: var(--text-muted); border-top: 1px solid rgba(255,255,255,0.1); padding-top: 12px;">
-                Don't over-rehearse, keep it genuine!
-              </div>
-            </div>
-
-          </div>
-        </div>
-      </section>
-
-      <!-- ============================================================
-           SLIDE 6: 心法三：在台下找到一位「盟友」
-           ============================================================ -->
-      <section data-state="slide-5">
-        <div class="slide-header">
-          <div class="slide-title-wrap">
-            <span class="slide-badge">PILLAR 03 ・ 心理定錨</span>
-            <h2 class="slide-title">在台下找到一位<span class="gold-text">「盟友」</span></h2>
-          </div>
-          <div class="slide-subtitle">眼神錨定與登台前破冰微對話</div>
-        </div>
-
-        <div class="slide-body">
-          <div class="grid-2">
-            <!-- 左欄：眼神定錨 -->
-            <div class="glass-card" style="display: flex; flex-direction: column; justify-content: space-between;">
-              <div>
-                <div style="display:flex; align-items:center; gap:12px; margin-bottom:16px;">
-                  <span style="font-size: 2.4rem;">👀</span>
-                  <h3 style="font-size: 2.1rem; color: #ffffff;">眼神定錨給予安全感</h3>
-                </div>
-
-                <p style="font-size: 1.35rem; line-height: 1.6; color: var(--text-sub);">
-                  在幾百名聽眾中，迅速找到那位：<br>
-                  <strong style="color:var(--gold-light); font-size:1.45rem;">「認真看著台上、頻頻點頭回應、面帶善意微笑」</strong>的人。
-                </p>
-
-                <div style="background: rgba(15,23,42,0.7); padding: 20px; border-radius: 14px; margin-top: 20px; border-left: 4px solid var(--cyan-primary);">
-                  <div style="font-size: 1.25rem; font-weight: 700; color: #ffffff; margin-bottom: 8px;">心理學驚人效應：</div>
-                  <div style="font-size: 1.15rem; line-height: 1.6; color: var(--text-sub);">
-                    人在台上說話，不需要全場幾百人同時起立鼓掌；<strong>只要有「一位認真在聽的盟友」</strong>，講者的聲音就會放開，動力與自信瞬間倍增！
-                  </div>
-                </div>
-              </div>
-
-              <div class="quote-box" style="font-size: 1.25rem; padding: 16px 20px;">
-                🌟 當你感到慌亂或被某位臭臉聽眾干擾時，把視線投向你的「盟友」，重新汲取力量！
-              </div>
-            </div>
-
-            <!-- 右欄：登台前破冰微對話與聽眾心理 -->
-            <div class="glass-card" style="display: flex; flex-direction: column; justify-content: space-between;">
-              <div>
-                <div style="display:flex; align-items:center; gap:12px; margin-bottom:16px;">
-                  <span style="font-size: 2.4rem;">🤝</span>
-                  <h3 style="font-size: 2.1rem; color: #ffffff;">登台前的「破冰微對話」</h3>
-                </div>
-
-                <ul class="check-list">
-                  <li>
-                    <span class="check-icon">✓</span>
-                    <div>
-                      <strong>提前抵達現場，先與 2～3 位聽眾寒暄</strong><br>
-                      隨意聊聊：「今天路上塞車嗎？」「今天最想從這堂課帶走什麼？」
-                    </div>
-                  </li>
-                  <li>
-                    <span class="check-icon">✓</span>
-                    <div>
-                      <strong>神經重塑：化敵為友</strong><br>
-                      簡短真實的對話會提醒大腦：<strong>台下坐著的是有血有肉的夥伴，不是來挑毛病的嚴苛評審！</strong>
-                    </div>
-                  </li>
-                  <li>
-                    <span class="check-icon">✓</span>
-                    <div>
-                      <strong>牢記聽眾的「心理底色」</strong><br>
-                      聽眾特地花時間坐在台下，絕大多數是<span class="highlight-pill">「真心希望你成功」</span>的！他們渴望獲得啟發，而非等著看講者出糗。
-                    </div>
-                  </li>
-                </ul>
-              </div>
-
-              <div style="background: rgba(16,185,129,0.15); border: 1px solid var(--green-border); padding: 16px 20px; border-radius: 12px; font-size: 1.15rem; color: var(--green-light);">
-                🤝 <strong>雙贏連結</strong>：在台下聊過天的聽眾，正式開講時 100% 會成為你最忠實的頭號盟友！
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- ============================================================
-           SLIDE 7: 心法四：開場千萬別說「我沒自信」
-           ============================================================ -->
-      <section data-state="slide-6">
-        <div class="slide-header">
-          <div class="slide-title-wrap">
-            <span class="slide-badge">PILLAR 04 ・ 專業形象</span>
-            <h2 class="slide-title">開場千萬別說<span class="gold-text">「我沒自信」</span></h2>
-          </div>
-          <div class="slide-subtitle">過度謙虛等同自毀專業形象</div>
-        </div>
-
-        <div class="slide-body">
-          <div class="grid-2">
-            
-            <!-- 左欄：三大自殺式開場白地雷 -->
-            <div class="glass-card card-mistake" style="display: flex; flex-direction: column; justify-content: space-between;">
-              <div>
-                <span class="badge-mistake">❌ 三大致命自殺式開場白</span>
-                <h3 style="font-size: 2.1rem; color: #ffffff; margin-bottom: 18px;">「這些自謙，瞬間澆熄聽眾期待」</h3>
-                
-                <div style="display: flex; flex-direction: column; gap: 14px;">
-                  <div style="background: rgba(0,0,0,0.3); padding: 14px 18px; border-radius: 10px; border-left: 4px solid var(--red-primary); font-size: 1.25rem;">
-                    ❌ 「不好意思，我今天其實沒有什麼自信……」
-                  </div>
-                  <div style="background: rgba(0,0,0,0.3); padding: 14px 18px; border-radius: 10px; border-left: 4px solid var(--red-primary); font-size: 1.25rem;">
-                    ❌ 「我對這個領域其實不太熟，不知道能不能講好……」
-                  </div>
-                  <div style="background: rgba(0,0,0,0.3); padding: 14px 18px; border-radius: 10px; border-left: 4px solid var(--red-primary); font-size: 1.25rem;">
-                    ❌ 「臨時被主管叫上來，如果說得不好請大家見諒……」
-                  </div>
-                </div>
-
-                <div style="margin-top: 20px; font-size: 1.2rem; line-height: 1.6; color: var(--red-light);">
-                  ⚠️ <strong>災難後果</strong>：你還沒開始分享，聽眾腦海已亮起紅燈，開始質疑你的資格、懷疑這場演講浪費時間！
-                </div>
-              </div>
-
-              <div style="background: rgba(0,0,0,0.4); padding: 14px 18px; border-radius: 10px; font-size: 1.1rem; color: var(--text-sub);">
-                💡 職場真相：在公眾面前，「貶低自己的開場」不是美德，而是推卸專業責任。
-              </div>
-            </div>
-
-            <!-- 右欄：卓越肯定表達與業務法則 -->
-            <div class="glass-card card-success" style="display: flex; flex-direction: column; justify-content: space-between;">
-              <div>
-                <span class="badge-success">⭕ 卓越肯定句替代方案</span>
-                <h3 style="font-size: 2.1rem; color: #ffffff; margin-bottom: 18px;">「以價值為核心，展現底氣與熱情」</h3>
-
-                <div style="display: flex; flex-direction: column; gap: 14px;">
-                  <div style="background: rgba(0,0,0,0.3); padding: 14px 18px; border-radius: 10px; border-left: 4px solid var(--green-primary); font-size: 1.25rem;">
-                    ⭕ 「今天我要跟大家分享的這套方法，能實質解決大家在工作上的關鍵痛點！」
-                  </div>
-                  <div style="background: rgba(0,0,0,0.3); padding: 14px 18px; border-radius: 10px; border-left: 4px solid var(--green-primary); font-size: 1.25rem;">
-                    ⭕ 「這個主題最迷人、最精采的地方，就在接下來這三大亮點！」
-                  </div>
-                </div>
-
-                <div style="margin-top: 20px; background: rgba(15,23,42,0.7); padding: 18px; border-radius: 12px; border: 1px solid var(--border-gold);">
-                  <strong style="color:var(--gold-light); font-size:1.25rem;">💼 業務推銷黃金法則：</strong><br>
-                  <span style="font-size:1.15rem; line-height:1.6; color:var(--text-sub);">
-                    如果業務員說「這台車我不太懂，不知道好不好開」，客戶絕不敢買單！唯有你自信地展現價值，對方才會全心信任。
-                  </span>
-                </div>
-              </div>
-
-              <div style="background: rgba(245,158,11,0.15); border: 1px solid var(--border-gold); padding: 14px 18px; border-radius: 10px; font-size: 1.15rem; color: var(--gold-light);">
-                🗣️ <strong>登台前 1 分鐘自我喊話</strong>：「今天這場分享一定會非常精彩、極具價值！」
-              </div>
-            </div>
-
-          </div>
-        </div>
-      </section>
-
-      <!-- ============================================================
-           SLIDE 8: 心法五：想好最後一句話，讓聽眾知道該帶走什麼
-           ============================================================ -->
-      <section data-state="slide-7">
-        <div class="slide-header">
-          <div class="slide-title-wrap">
-            <span class="slide-badge">PILLAR 05 ・ 終局定音</span>
-            <h2 class="slide-title">想好最後一句話：<span class="gold-text">讓聽眾知道該帶走什麼</span></h2>
-          </div>
-          <div class="slide-subtitle">打造回味無窮的 Takeaway Message</div>
-        </div>
-
-        <div class="slide-body">
-          <div class="grid-2">
-            
-            <!-- 左欄：拒絕虎頭蛇尾 -->
-            <div class="glass-card" style="display: flex; flex-direction: column; justify-content: space-between;">
-              <div>
-                <h3 style="font-size: 2.1rem; color: #ffffff; margin-bottom: 20px;">
-                  🚫 拒絕虎頭蛇尾的「呃……以上」
-                </h3>
-
-                <p style="font-size: 1.35rem; line-height: 1.6; color: var(--text-sub);">
-                  許多講者前面 95% 表現極佳，最後卻因時間快到而草草說：<br>
-                  <span style="color:var(--red-light); font-size:1.45rem; font-weight:700;">「呃……我要講的差不多就這樣，謝謝大家。」</span>
-                </p>
-
-                <div style="background: rgba(244,63,94,0.1); border-left: 4px solid var(--red-primary); padding: 20px; border-radius: 0 12px 12px 0; margin-top: 20px;">
-                  <strong style="color:var(--red-light); font-size:1.25rem;">峰終定律 (Peak-End Rule)：</strong><br>
-                  <span style="font-size:1.15rem; line-height:1.6; color:var(--text-sub);">
-                    大腦對整場體驗的記憶，取決於<strong>「最高峰」與「結尾那一刻」</strong>。草率結尾會讓聽眾滿意度瞬間雪崩，失去「聽得值得」的充實感。
-                  </span>
-                </div>
-              </div>
-
-              <div style="background: rgba(15,23,42,0.6); padding: 18px 22px; border-radius: 12px; font-size: 1.2rem; color: var(--cyan-light);">
-                🎯 <strong>終局使命</strong>：明確告知聽眾，走出這間講堂，明天立刻能採取的<strong>「具體行動」</strong>！
-              </div>
-            </div>
-
-            <!-- 右欄：名師典範結尾金句拆解 -->
-            <div class="glass-card" style="display: flex; flex-direction: column; justify-content: space-between; border-color: var(--border-gold);">
-              <div>
-                <span class="slide-badge" style="font-size:0.85rem; margin-bottom:12px;">GOLDEN TEMPLATE</span>
-                <h3 style="font-size: 2.1rem; color: var(--gold-light); margin-bottom: 18px;">
-                  👑 名師示範結尾句範本
-                </h3>
-
-                <div class="quote-box" style="font-size: 1.35rem; line-height: 1.7; padding: 24px; margin-bottom: 20px;">
-                  「各位不需要變成不會緊張的人。真正重要的是做足周全準備，讓自己<strong>就算緊張也能勇敢把話說出來</strong>。<br><br>
-                  下一次簡報前，請務必先決定好你的<span class="gold-text" style="font-weight:900;">『第一句話』</span>和<span class="gold-text" style="font-weight:900;">『最後一句話』</span>，在腦中完整預演後，抬頭挺胸站上舞台！」
-                </div>
-
-                <div style="display: flex; flex-direction: column; gap: 10px; font-size: 1.15rem; color: var(--text-sub);">
-                  <div>✓ <strong>重申核心</strong>：接納緊張，以準備建立底氣</div>
-                  <div>✓ <strong>具體動作</strong>：鎖定第一句與最後一句</div>
-                  <div>✓ <strong>激勵號召</strong>：抬頭挺胸站上舞台</div>
-                </div>
-              </div>
-
-              <div style="background: rgba(245,158,11,0.15); padding: 14px 20px; border-radius: 10px; font-size: 1.15rem; color: var(--gold-light); text-align: center; font-weight: 700;">
-                金句定音 ＝ 演講在掌聲雷動中優雅落幕
-              </div>
-            </div>
-
-          </div>
-        </div>
-      </section>
-
-      <!-- ============================================================
-           SLIDE 9: 把緊張轉化為燃料：4 大登台前身心儀式
-           ============================================================ -->
-      <section data-state="slide-8">
-        <div class="slide-header">
-          <div class="slide-title-wrap">
-            <span class="slide-badge">SECTION 03 ・ 生理調控實踐</span>
-            <h2 class="slide-title">把緊張轉化為燃料：<span class="gold-text">4 大登台前身心儀式</span></h2>
-          </div>
-          <div class="slide-subtitle">登台前 15 分鐘的神經科學調控指南</div>
-        </div>
-
-        <div class="slide-body">
-          <div class="grid-4" style="height: 100%;">
-            
-            <!-- 儀式 1: 生理重置 -->
-            <div class="glass-card" style="display: flex; flex-direction: column; justify-content: space-between;">
-              <div>
-                <div style="font-size: 2.8rem; margin-bottom: 8px;">🫁</div>
-                <h3 style="font-size: 1.7rem; color: #ffffff; margin-bottom: 8px;">生理重置</h3>
-                <div style="font-size: 1.1rem; color: var(--gold-light); font-weight: 700; margin-bottom: 12px;">4-8 呼吸節奏</div>
-                <p style="font-size: 1.05rem; line-height: 1.6; color: var(--text-sub);">
-                  鼻子深吸氣 <strong>4 秒</strong>，噘嘴緩慢吐氣 <strong>6～8 秒</strong>，循環進行 1 分鐘。
-                </p>
-              </div>
-              <div style="background: rgba(15,23,42,0.7); padding: 12px; border-radius: 10px; font-size: 0.95rem; color: var(--cyan-light);">
-                🔬 <strong>原理</strong>：壓力教練 Jordan Friedman 指出，長吐氣能啟動副交感神經，強制降低心率。
-              </div>
-            </div>
-
-            <!-- 儀式 2: 認知重構 -->
-            <div class="glass-card" style="display: flex; flex-direction: column; justify-content: space-between;">
-              <div>
-                <div style="font-size: 2.8rem; margin-bottom: 8px;">⚡</div>
-                <h3 style="font-size: 1.7rem; color: #ffffff; margin-bottom: 8px;">認知重構</h3>
-                <div style="font-size: 1.1rem; color: var(--gold-light); font-weight: 700; margin-bottom: 12px;">將焦慮詮釋為燃料</div>
-                <p style="font-size: 1.05rem; line-height: 1.6; color: var(--text-sub);">
-                  手心出汗與心跳加速代表：<strong>「我的身體已經做好爆發準備！」</strong>
-                </p>
-              </div>
-              <div style="background: rgba(15,23,42,0.7); padding: 12px; border-radius: 10px; font-size: 0.95rem; color: var(--cyan-light);">
-                🔬 <strong>原理</strong>：William Arruda 指出，心悸與興奮的生理指標完全相同，取決於大腦的詮釋。
-              </div>
-            </div>
-
-            <!-- 儀式 3: 錨定儀式 -->
-            <div class="glass-card" style="display: flex; flex-direction: column; justify-content: space-between;">
-              <div>
-                <div style="font-size: 2.8rem; margin-bottom: 8px;">🎵</div>
-                <h3 style="font-size: 1.7rem; color: #ffffff; margin-bottom: 8px;">錨定儀式</h3>
-                <div style="font-size: 1.1rem; color: var(--gold-light); font-weight: 700; margin-bottom: 12px;">專屬聽覺與嗅覺信號</div>
-                <p style="font-size: 1.05rem; line-height: 1.6; color: var(--text-sub);">
-                  固定聽同一首激勵戰歌；或聞專屬氣味（如現磨咖啡豆、薄荷精油）。
-                </p>
-              </div>
-              <div style="background: rgba(15,23,42,0.7); padding: 12px; border-radius: 10px; font-size: 0.95rem; color: var(--cyan-light);">
-                🔬 <strong>原理</strong>：利用古典條件反射建立神經錨點，信號一出大腦自動切換至「專注平靜」。
-              </div>
-            </div>
-
-            <!-- 儀式 4: 溫暖連結 -->
-            <div class="glass-card" style="display: flex; flex-direction: column; justify-content: space-between;">
-              <div>
-                <div style="font-size: 2.8rem; margin-bottom: 8px;">❤️</div>
-                <h3 style="font-size: 1.7rem; color: #ffffff; margin-bottom: 8px;">溫暖連結</h3>
-                <div style="font-size: 1.1rem; color: var(--gold-light); font-weight: 700; margin-bottom: 12px;">創造人際感恩時刻</div>
-                <p style="font-size: 1.05rem; line-height: 1.6; color: var(--text-sub);">
-                  看一眼摯愛家人照片、傳簡訊向好友打氣、或真誠感謝身旁的工作人員。
-                </p>
-              </div>
-              <div style="background: rgba(15,23,42,0.7); padding: 12px; border-radius: 10px; font-size: 0.95rem; color: var(--cyan-light);">
-                🔬 <strong>原理</strong>：演說教練 Gina Rapaport 指出，愛與感恩能讓神經從防衛轉向「安全歸屬」。
-              </div>
-            </div>
-
-          </div>
-        </div>
-      </section>
-
-      <!-- ============================================================
-           SLIDE 10: 演講開場與結尾話術對照表
-           ============================================================ -->
-      <section data-state="slide-9">
-        <div class="slide-header">
-          <div class="slide-title-wrap">
-            <span class="slide-badge">SECTION 04 ・ 話術對決</span>
-            <h2 class="slide-title">實戰話術對照：<span class="gold-text">地雷 vs 卓越示範</span></h2>
-          </div>
-          <div class="slide-subtitle">關鍵 3 大場景的開口精準度</div>
-        </div>
-
-        <div class="slide-body">
-          <div class="glass-card" style="padding: 16px 28px;">
-            <table class="speech-table">
-              <thead>
-                <tr>
-                  <th style="width: 15%;">場景環節</th>
-                  <th style="width: 42%; color: var(--red-light);">❌ 錯誤地雷話術（引發聽眾疑慮）</th>
-                  <th style="width: 43%; color: var(--green-light);">⭕ 卓越示範話術（展現底氣與價值）</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td style="color:var(--gold-light);">最初 30 秒<br><span style="font-size:0.9rem; font-weight:400; color:var(--text-muted);">建立首要印象</span></td>
-                  <td style="color: #fca5a5;">
-                    「呃……大家早，今天簡報準備得有點匆忙，大家隨便聽聽就好。」
-                  </td>
-                  <td style="color: #86efac; font-weight: 500;">
-                    「各位夥伴早安！今天我想用接下來 20 分鐘，為大家徹底拆解一套能節省 50% 時間的工作法！」
-                  </td>
-                </tr>
-                <tr>
-                  <td style="color:var(--gold-light);">面臨挑戰提問<br><span style="font-size:0.9rem; font-weight:400; color:var(--text-muted);">臨場應變專業度</span></td>
-                  <td style="color: #fca5a5;">
-                    「這個……老實說我沒研究過，我不知道耶。」
-                  </td>
-                  <td style="color: #86efac; font-weight: 500;">
-                    「這是一個非常深刻且切中核心的提問！根據我目前的觀察與經驗，我們可以從兩個角度切入思考……」
-                  </td>
-                </tr>
-                <tr>
-                  <td style="color:var(--gold-light);">收尾總結<br><span style="font-size:0.9rem; font-weight:400; color:var(--text-muted);">留存核心記憶點</span></td>
-                  <td style="color: #fca5a5;">
-                    「呃……差不多就這樣了，時間到了，以上，謝謝。」
-                  </td>
-                  <td style="color: #86efac; font-weight: 500;">
-                    「今天的分享就一句話：『準備做足，緊張就是你的最佳燃料！』期待大家明天在各自崗位上，大膽開口、發揮影響力！」
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-      </section>
-
-      <!-- ============================================================
-           SLIDE 11: 上台發表實戰檢核清單 (Checklist)
-           ============================================================ -->
-      <section data-state="slide-10">
-        <div class="slide-header">
-          <div class="slide-title-wrap">
-            <span class="slide-badge">SECTION 05 ・ 倒數執行指南</span>
-            <h2 class="slide-title">上台發表實戰<span class="gold-text">倒數檢核清單</span></h2>
-          </div>
-          <div class="slide-subtitle">照表操課，徹底消除上台焦慮</div>
-        </div>
-
-        <div class="slide-body">
-          <div class="glass-card" style="padding: 24px 36px;">
-            <ul class="check-list" style="gap: 20px;">
-              <li>
-                <div style="font-family: var(--font-mono); background: rgba(245,158,11,0.2); color: var(--gold-light); border: 1px solid var(--border-gold); padding: 4px 14px; border-radius: 8px; font-weight: 800; font-size: 1.15rem; min-width: 140px; text-align: center;">
-                  演講前 3 天
-                </div>
-                <div style="font-size: 1.35rem;">
-                  完成結構化「授課筆記」，明確標註順序、過場詞，並提前預想 <strong>3 個棘手問題與應答策略</strong>。
-                </div>
-              </li>
-
-              <li>
-                <div style="font-family: var(--font-mono); background: rgba(245,158,11,0.2); color: var(--gold-light); border: 1px solid var(--border-gold); padding: 4px 14px; border-radius: 8px; font-weight: 800; font-size: 1.15rem; min-width: 140px; text-align: center;">
-                  演講前 1 天
-                </div>
-                <div style="font-size: 1.35rem;">
-                  進行至少 1 次完整流程想像訓練，並<span class="highlight-pill">大聲出聲練習至少 2 遍</span>，強化發音肌肉記憶。
-                </div>
-              </li>
-
-              <li>
-                <div style="font-family: var(--font-mono); background: rgba(245,158,11,0.2); color: var(--gold-light); border: 1px solid var(--border-gold); padding: 4px 14px; border-radius: 8px; font-weight: 800; font-size: 1.15rem; min-width: 140px; text-align: center;">
-                  演講前 1 天
-                </div>
-                <div style="font-size: 1.35rem;">
-                  一字不差地敲定<strong>「最初 30 秒的第一句話」</strong>與<strong>「結尾最後一句收尾金句」</strong>。
-                </div>
-              </li>
-
-              <li>
-                <div style="font-family: var(--font-mono); background: rgba(56,189,248,0.2); color: var(--cyan-light); border: 1px solid var(--cyan-primary); padding: 4px 14px; border-radius: 8px; font-weight: 800; font-size: 1.15rem; min-width: 140px; text-align: center;">
-                  登台前 30 分鐘
-                </div>
-                <div style="font-size: 1.35rem;">
-                  提早抵達現場測試麥克風與簡報筆，並主動與台下 <strong>2～3 位聽眾親切破冰微對話</strong>。
-                </div>
-              </li>
-
-              <li>
-                <div style="font-family: var(--font-mono); background: rgba(56,189,248,0.2); color: var(--cyan-light); border: 1px solid var(--cyan-primary); padding: 4px 14px; border-radius: 8px; font-weight: 800; font-size: 1.15rem; min-width: 140px; text-align: center;">
-                  登台前 5 分鐘
-                </div>
-                <div style="font-size: 1.35rem;">
-                  執行 <strong>4-8 呼吸循環 1 分鐘</strong>，大聲對自己說一句正向肯定句：「這場分享極具價值！」
-                </div>
-              </li>
-
-              <li>
-                <div style="font-family: var(--font-mono); background: rgba(16,185,129,0.25); color: var(--green-light); border: 1px solid var(--green-border); padding: 4px 14px; border-radius: 8px; font-weight: 800; font-size: 1.15rem; min-width: 140px; text-align: center;">
-                  剛站上講台時
-                </div>
-                <div style="font-size: 1.35rem;">
-                  站定、深呼吸、微笑環視全場，<strong>眼神鎖定 1 位表情專注的「盟友」</strong>，自信吐出第一句話！
-                </div>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </section>
-
-      <!-- ============================================================
-           SLIDE 12: 總結金句與行動號召
-           ============================================================ -->
-      <section data-state="slide-11" style="justify-content: center; align-items: center; text-align: center;">
-        <div style="max-width: 1300px; margin: 0 auto; display: flex; flex-direction: column; align-items: center; gap: 32px;">
-          
-          <div class="slide-badge" style="font-size: 1.1rem; padding: 6px 20px;">
-            🌟 總結・TAKEAWAY FOR TOMORROW
-          </div>
-
-          <h2 style="font-size: 3.8rem; font-weight: 900; line-height: 1.25;">
-            你不需要變成「不會緊張」的人，<br>
-            只需打造<span class="gold-text">「就算緊張也能從容開口」</span>的自己！
-          </h2>
-
-          <div class="quote-box" style="font-size: 1.6rem; max-width: 1100px; text-align: center; line-height: 1.8;">
-            「下一次簡報前，請務必先決定好你的<strong>『第一句話』</strong>和<strong>『最後一句話』</strong>，<br>
-            在腦中完整預演後，抬頭挺胸站上舞台！」
-          </div>
-
-          <div style="display: flex; gap: 24px; margin-top: 10px;">
-            <div style="background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.12); padding: 18px 30px; border-radius: 14px; font-size: 1.25rem;">
-              🎯 <strong>行動 1</strong>：寫下開場最初 30 秒
-            </div>
-            <div style="background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.12); padding: 18px 30px; border-radius: 14px; font-size: 1.25rem;">
-              🗣️ <strong>行動 2</strong>：出聲練習，默讀不算
-            </div>
-            <div style="background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.12); padding: 18px 30px; border-radius: 14px; font-size: 1.25rem;">
-              🤝 <strong>行動 3</strong>：提前到場找 2 位盟友
-            </div>
-          </div>
-
-          <div style="margin-top: 24px; font-size: 1.6rem; color: var(--gold-light); font-weight: 800; letter-spacing: 0.05em;">
-            感謝聆聽 ｜ 歡迎交流討論與提問 Q&A
-          </div>
-
-          <div style="font-size: 1rem; color: var(--text-muted);">
-            資料來源：經理人 Manager Today ｜ 木村教授・William Arruda・Jordan Friedman・Gina Rapaport
-          </div>
-
-        </div>
-      </section>
-
-    </div>
-  </div>
-
-  <!-- ============================================================
-       REVEAL.JS 5.1.0 核心腳本與演講工具邏輯
-       ============================================================ -->
-  <script src="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.js"></script>
-  <script>
-    // 1. 初始化 Reveal.js (大螢幕專屬 1920x1080 滿版向量配置)
-    const deck = new Reveal({
-      width: 1920,
-      height: 1080,
-      margin: 0.04,
-      minScale: 0.2,
-      maxScale: 2.0,
-      controls: true,
-      controlsTutorial: true,
-      controlsLayout: 'bottom-right',
-      controlsBackArrows: 'faded',
-      progress: true,
-      slideNumber: 'c / t',
-      showSlideNumber: 'all',
-      hash: true,
-      history: true,
-      keyboard: true,
-      overview: true,
-      center: true,
-      touch: true,
-      loop: false,
-      transition: 'slide',
-      transitionSpeed: 'default',
-      backgroundTransition: 'fade'
-    });
-
-    deck.initialize().then(() => {
-      updateActiveChapter(deck.getIndices().h);
-    });
-
-    // 2. 監聽切頁更新章節目錄啟用狀態
-    deck.on('slidechanged', event => {
-      updateActiveChapter(event.indexh);
-    });
-
-    function updateActiveChapter(index) {
-      const items = document.querySelectorAll('.chapter-item');
-      items.forEach((item, i) => {
-        if (i === index) {
-          item.classList.add('active');
-        } else {
-          item.classList.remove('active');
-        }
-      });
-    }
-
-    // 3. 目錄抽屜跳轉點擊事件
-    const drawer = document.getElementById('chapter-drawer');
-    const toggleDrawerBtn = document.getElementById('btn-toggle-drawer');
+  <div id="app-container">
     
-    toggleDrawerBtn.addEventListener('click', () => {
-      drawer.classList.toggle('open');
-    });
+    <!-- ============================================================
+         頂部 Header (固定高度，永不遮蓋內容)
+         ============================================================ -->
+    <header id="main-header" class="flex items-center justify-between px-4 py-2.5">
+      <div class="flex items-center space-x-2">
+        <span class="w-2.5 h-2.5 rounded-full bg-amber-400 animate-pulse"></span>
+        <span class="text-xs sm:text-sm font-bold text-slate-200 tracking-wider">公眾演說・實戰心法</span>
+      </div>
+      <div id="page-indicator" class="text-xs font-mono font-bold text-amber-300 bg-amber-500/20 px-2.5 py-0.5 rounded-full border border-amber-500/30">
+        1 / 8
+      </div>
+    </header>
 
-    document.querySelectorAll('.chapter-item').forEach(item => {
-      item.addEventListener('click', () => {
-        const slideIdx = parseInt(item.getAttribute('data-slide'), 10);
-        deck.slide(slideIdx, 0);
-        drawer.classList.remove('open');
-      });
-    });
+    <!-- ============================================================
+         中間 Swiper 內容區 (8 頁嚴格獨立閉合)
+         ============================================================ -->
+    <main id="main-swiper-container">
+      <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
 
-    // 點擊投影片區域自動收合抽屜
-    document.querySelector('.reveal').addEventListener('click', () => {
-      if (drawer.classList.contains('open')) {
-        drawer.classList.remove('open');
+          <!-- ============================================================
+               SLIDE 1: 封面
+               ============================================================ -->
+          <div class="swiper-slide">
+            <div class="slide-scroll-content flex flex-col justify-between">
+              <div>
+                <div class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-amber-500/15 border border-amber-500/30 text-amber-300 text-[11px] font-bold mb-3">
+                  <span>🎓</span> 大學名師 30 年摸索淬鍊
+                </div>
+
+                <h1 class="text-2xl sm:text-3xl font-black text-white leading-tight mb-2">
+                  開場千萬別說<br>
+                  <span class="gold-gradient-text text-3xl sm:text-4xl">「我沒自信」</span>
+                </h1>
+
+                <p class="text-sm font-medium text-slate-300 leading-relaxed mb-4">
+                  打造<strong class="text-white">即使緊張也能從容開口</strong>的自己：面對千人大講堂的 5 個上台準備心法
+                </p>
+
+                <!-- 名師與專家群標籤 -->
+                <div class="grid grid-cols-2 gap-2 mb-4">
+                  <div class="bg-slate-900/70 border border-slate-700/60 rounded-lg p-2">
+                    <span class="text-[10px] font-bold text-cyan-400 block mb-0.5">30年教書老將</span>
+                    <span class="text-xs font-bold text-slate-200">木村教授（日本大學）</span>
+                  </div>
+                  <div class="bg-slate-900/70 border border-slate-700/60 rounded-lg p-2">
+                    <span class="text-[10px] font-bold text-amber-400 block mb-0.5">個人品牌大師</span>
+                    <span class="text-xs font-bold text-slate-200">William Arruda</span>
+                  </div>
+                  <div class="bg-slate-900/70 border border-slate-700/60 rounded-lg p-2">
+                    <span class="text-[10px] font-bold text-emerald-400 block mb-0.5">抗壓教練</span>
+                    <span class="text-xs font-bold text-slate-200">Jordan Friedman</span>
+                  </div>
+                  <div class="bg-slate-900/70 border border-slate-700/60 rounded-lg p-2">
+                    <span class="text-[10px] font-bold text-rose-400 block mb-0.5">演說教練</span>
+                    <span class="text-xs font-bold text-slate-200">Gina Rapaport</span>
+                  </div>
+                </div>
+
+                <!-- 核心心法框 -->
+                <div class="quote-box">
+                  <div class="text-xs font-bold text-amber-300 mb-1">💡 終極解方</div>
+                  <div class="text-xs sm:text-sm text-slate-200 leading-relaxed">
+                    周全準備的目的不是保證零意外，而是建立強大底氣 ── <strong>「就算出了意外，憑我扎實累積的準備，也絕對應付得來！」</strong>
+                  </div>
+                </div>
+              </div>
+
+              <!-- 底部滑動提示 -->
+              <div class="mt-4 pt-3 border-t border-slate-800 text-center">
+                <span class="text-xs text-amber-400 font-semibold tracking-wide animate-pulse">
+                  👉 向左滑動開始閱讀精彩心法
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <!-- ============================================================
+               SLIDE 2: 核心思維逆轉：從「消除緊張」到「管理緊張」
+               ============================================================ -->
+          <div class="swiper-slide">
+            <div class="slide-scroll-content">
+              <div class="mb-3">
+                <span class="text-[11px] font-mono font-bold text-cyan-400 tracking-wider">SECTION 01 ・ 思維革命</span>
+                <h2 class="text-xl sm:text-2xl font-black text-white leading-snug">
+                  從「消除緊張」<br>到<span class="gold-gradient-text">「管理緊張」</span>
+                </h2>
+              </div>
+
+              <!-- 迷思 vs 真相 -->
+              <div class="space-y-3">
+                <div class="card-mistake p-3.5">
+                  <div class="inline-flex items-center gap-1 text-[11px] font-bold text-rose-400 bg-rose-500/20 px-2 py-0.5 rounded mb-1.5">
+                    ❌ 傳統致命迷思
+                  </div>
+                  <div class="text-sm font-bold text-white mb-1">「優秀講者上台都不會緊張」</div>
+                  <p class="text-xs text-slate-300 leading-relaxed">
+                    面對上百人凝視，交感神經必然興奮、心跳加速，這是人類正常的生理本能，<strong class="text-rose-300">絕非能力缺陷</strong>。花力氣壓抑只會耗盡認知資源，導致腦袋空白。
+                  </p>
+                  <div class="mt-2 text-[11px] text-slate-400 italic">
+                    📌 木村教授實證：教書近 30 年、每堂 400～1,000 人，至今登台依然會心跳加速！
+                  </div>
+                </div>
+
+                <div class="card-success p-3.5">
+                  <div class="inline-flex items-center gap-1 text-[11px] font-bold text-emerald-400 bg-emerald-500/20 px-2 py-0.5 rounded mb-1.5">
+                    ⭕ 卓越講者心法
+                  </div>
+                  <div class="text-sm font-bold text-white mb-1">「管理緊張，用充足準備取代僥倖」</div>
+                  <ul class="text-xs text-slate-300 space-y-1.5 leading-relaxed">
+                    <li class="flex items-start gap-1.5">
+                      <span class="text-emerald-400 font-bold">✓</span>
+                      <span><strong>生理激動 ＝ 舞台動能</strong>：將心跳加速詮釋為「身體正調動全身感官與爆發力」。</span>
+                    </li>
+                    <li class="flex items-start gap-1.5">
+                      <span class="text-emerald-400 font-bold">✓</span>
+                      <span><strong>準備做足的平靜力量</strong>：當紙上與腦海都走過一遍，內在自然萌生「做到這種程度，一定沒問題」的強大底氣。</span>
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="quote-box">
+                  <div class="text-xs font-bold text-amber-300">🔑 記憶重點</div>
+                  <div class="text-xs text-slate-200 mt-0.5">
+                    「不是追求不緊張，而是帶著緊張依然自信開口！」
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- ============================================================
+               SLIDE 3: 5 大上台心法全景導覽
+               ============================================================ -->
+          <div class="swiper-slide">
+            <div class="slide-scroll-content">
+              <div class="mb-3">
+                <span class="text-[11px] font-mono font-bold text-cyan-400 tracking-wider">SECTION 02 ・ 系統架構</span>
+                <h2 class="text-xl sm:text-2xl font-black text-white leading-snug">
+                  名師 30 年淬鍊<br><span class="gold-gradient-text">5 大上台心法藍圖</span>
+                </h2>
+              </div>
+
+              <!-- 5 大心法卡片列表 -->
+              <div class="space-y-2.5">
+                <div class="card-glass p-3 flex items-start gap-3">
+                  <span class="text-xl font-mono font-black text-amber-400 w-7 flex-shrink-0">01</span>
+                  <div>
+                    <h3 class="text-sm font-bold text-white">筆記做足 ── 預演細節與提問</h3>
+                    <p class="text-xs text-slate-300 leading-relaxed mt-0.5">
+                      寫下順序、講到哪裡、板書對應，提前推演 3～5 個棘手提問，化解未知焦慮。
+                    </p>
+                  </div>
+                </div>
+
+                <div class="card-glass p-3 flex items-start gap-3">
+                  <span class="text-xl font-mono font-black text-amber-400 w-7 flex-shrink-0">02</span>
+                  <div>
+                    <h3 class="text-sm font-bold text-white">腦中預演 ── 敲定最初 30 秒</h3>
+                    <p class="text-xs text-slate-300 leading-relaxed mt-0.5">
+                      腦中想像微電影走完全程；第一句話字字確立並大聲出聲練習，氣勢帶動全場。
+                    </p>
+                  </div>
+                </div>
+
+                <div class="card-glass p-3 flex items-start gap-3">
+                  <span class="text-xl font-mono font-black text-amber-400 w-7 flex-shrink-0">03</span>
+                  <div>
+                    <h3 class="text-sm font-bold text-white">尋找盟友 ── 眼神定錨微笑點頭者</h3>
+                    <p class="text-xs text-slate-300 leading-relaxed mt-0.5">
+                      鎖定認真看你的盟友；登台前先找 2～3 位聽眾寒暄破冰，大腦判定「台下皆朋友」。
+                    </p>
+                  </div>
+                </div>
+
+                <div class="card-glass p-3 flex items-start gap-3">
+                  <span class="text-xl font-mono font-black text-amber-400 w-7 flex-shrink-0">04</span>
+                  <div>
+                    <h3 class="text-sm font-bold text-white">拒絕自謙 ── 開場絕不說沒自信</h3>
+                    <p class="text-xs text-slate-300 leading-relaxed mt-0.5">
+                      過度自貶是自毀專業。改用肯定句展現價值，登台前自我喊話：「這場分享極具價值！」
+                    </p>
+                  </div>
+                </div>
+
+                <div class="card-glass p-3 flex items-start gap-3">
+                  <span class="text-xl font-mono font-black text-amber-400 w-7 flex-shrink-0">05</span>
+                  <div>
+                    <h3 class="text-sm font-bold text-white">終局定音 ── 有力金句熱情收尾</h3>
+                    <p class="text-xs text-slate-300 leading-relaxed mt-0.5">
+                      拒絕草草收尾。濃縮核心 Takeaway，明確給出走出會場明天就能落地的具體行動。
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- ============================================================
+               SLIDE 4: 心法一 ＆ 心法二
+               ============================================================ -->
+          <div class="swiper-slide">
+            <div class="slide-scroll-content">
+              <div class="mb-3">
+                <span class="text-[11px] font-mono font-bold text-amber-400 tracking-wider">PILLARS 01 & 02 ・ 準備與預演</span>
+                <h2 class="text-xl sm:text-2xl font-black text-white leading-snug">
+                  心法 01 & 02：<span class="gold-gradient-text">做足筆記與腦中預演</span>
+                </h2>
+              </div>
+
+              <div class="space-y-3">
+                <!-- 心法一卡片 -->
+                <div class="card-glass p-3.5 border-l-4 border-l-amber-500">
+                  <div class="flex items-center gap-2 mb-1.5">
+                    <span class="text-xs font-bold text-amber-300 bg-amber-500/20 px-2 py-0.5 rounded">心法 01</span>
+                    <h3 class="text-sm font-bold text-white">把筆記做足，連提問都先想好</h3>
+                  </div>
+                  <ul class="text-xs text-slate-300 space-y-1.5 leading-relaxed">
+                    <li>• <strong>結構化推演</strong>：具體寫下「要講什麼、順序、講到哪裡」，並對應板書/簡報過場詞。</li>
+                    <li>• <strong>預擬 3～5 個棘手提問</strong>：先備妥數據與切入角度，即使現場討論偏離也能從容扣回主軸。</li>
+                    <li>• <strong>心理效應</strong>：大腦在紙上走過一遍，未知的恐慌感降至最低！</li>
+                  </ul>
+                </div>
+
+                <!-- 心法二卡片 -->
+                <div class="card-glass p-3.5 border-l-4 border-l-cyan-500">
+                  <div class="flex items-center gap-2 mb-1.5">
+                    <span class="text-xs font-bold text-cyan-300 bg-cyan-500/20 px-2 py-0.5 rounded">心法 02</span>
+                    <h3 class="text-sm font-bold text-white">腦中預演，鎖定最初 30 秒</h3>
+                  </div>
+                  <ul class="text-xs text-slate-300 space-y-1.5 leading-relaxed">
+                    <li>• <strong>想像訓練 (Mental Rehearsal)</strong>：像放電影走完「進場 ➜ 環視 ➜ 站定 ➜ 第一句 ➜ 主體 ➜ 互動 ➜ 收尾」。</li>
+                    <li>• <strong>第一句字字確立</strong>：剛上台最容易慌亂，第一句話必須宏亮篤定，氣勢直接帶動整場節奏！</li>
+                    <li>• <strong>William Arruda 加碼</strong>：練習一定要<strong>「出聲」</strong>！默讀與發聲的大腦神經迴路完全不同。親耳聽見發音才能建立口語記憶（保留呼吸感，勿死背）。</li>
+                  </ul>
+                </div>
+
+                <div class="quote-box">
+                  <div class="text-xs text-slate-200">
+                    💬 「書桌前流的汗越多，講台上流的冷汗就越少！」
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- ============================================================
+               SLIDE 5: 心法三 ＆ 心法四
+               ============================================================ -->
+          <div class="swiper-slide">
+            <div class="slide-scroll-content">
+              <div class="mb-3">
+                <span class="text-[11px] font-mono font-bold text-amber-400 tracking-wider">PILLARS 03 & 04 ・ 心理定錨與形象</span>
+                <h2 class="text-xl sm:text-2xl font-black text-white leading-snug">
+                  心法 03 & 04：<span class="gold-gradient-text">尋找盟友與拒絕自謙</span>
+                </h2>
+              </div>
+
+              <div class="space-y-3">
+                <!-- 心法三卡片 -->
+                <div class="card-glass p-3.5 border-l-4 border-l-amber-500">
+                  <div class="flex items-center gap-2 mb-1.5">
+                    <span class="text-xs font-bold text-amber-300 bg-amber-500/20 px-2 py-0.5 rounded">心法 03</span>
+                    <h3 class="text-sm font-bold text-white">在台下找到一位「盟友」</h3>
+                  </div>
+                  <ul class="text-xs text-slate-300 space-y-1.5 leading-relaxed">
+                    <li>• <strong>眼神定錨效應</strong>：不需要幾百人同時鼓掌，只要鎖定那位<strong>「頻頻點頭、微笑回應」</strong>的盟友，聲音與自信瞬間放開！</li>
+                    <li>• <strong>登台前破冰微對話</strong>：提前 15 分鐘到場找 2～3 位聽眾寒暄，提醒大腦「台下坐著的是有血有肉的人，不是嚴苛評審」。</li>
+                    <li>• <strong>聽眾心理底色</strong>：聽眾特地坐在台下，絕大多數是<strong>「真心渴望你成功並滿載而歸」</strong>的！</li>
+                  </ul>
+                </div>
+
+                <!-- 心法四卡片 -->
+                <div class="card-glass p-3.5 border-l-4 border-l-rose-500">
+                  <div class="flex items-center gap-2 mb-1.5">
+                    <span class="text-xs font-bold text-rose-300 bg-rose-500/20 px-2 py-0.5 rounded">心法 04</span>
+                    <h3 class="text-sm font-bold text-white">開場千萬別說「我沒自信」</h3>
+                  </div>
+                  <ul class="text-xs text-slate-300 space-y-1.5 leading-relaxed">
+                    <li>• <strong>謙虛不等於貶低自己</strong>：公眾演說中自謙「我不太熟、臨時被抓來」等同自毀形象，聽眾腦中立刻亮起紅燈！</li>
+                    <li>• <strong>業務推銷定律</strong>：如果業務員說「這東西我不太懂不知道好不好用」，沒人敢買單。展現價值才能贏得信任。</li>
+                    <li>• <strong>登台前自我喊話</strong>：對自己大聲說：「今天這場分享一定非常精彩、富有價值！」</li>
+                  </ul>
+                </div>
+
+                <div class="quote-box">
+                  <div class="text-xs text-slate-200">
+                    🌟 眼神看盟友，開口講價值；聽眾是來尋求解答，不是來看你出糗。
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- ============================================================
+               SLIDE 6: 心法五 ＆ 實戰話術對照表
+               ============================================================ -->
+          <div class="swiper-slide">
+            <div class="slide-scroll-content">
+              <div class="mb-3">
+                <span class="text-[11px] font-mono font-bold text-cyan-400 tracking-wider">PILLAR 05 & SCRIPT ・ 終局與對決</span>
+                <h2 class="text-xl sm:text-2xl font-black text-white leading-snug">
+                  心法 05：<span class="gold-gradient-text">終局定音與實戰話術</span>
+                </h2>
+              </div>
+
+              <!-- 心法五重點 -->
+              <div class="card-glass p-3 mb-3 border-l-4 border-l-amber-500">
+                <div class="text-xs font-bold text-amber-300 mb-1">心法 05 ・ 想好最後一句話</div>
+                <p class="text-xs text-slate-300 leading-relaxed">
+                  拒絕草草收尾的「呃……以上，謝謝大家」。利用<strong>峰終定律 (Peak-End Rule)</strong>，將整場精華濃縮成 1～2 句斬釘截鐵的行動指令，告訴聽眾明天走出去可以立即執行什麼！
+                </p>
+              </div>
+
+              <!-- 話術對照清單卡片 -->
+              <div class="space-y-2.5">
+                <!-- 最初 30 秒 -->
+                <div class="bg-slate-900/80 border border-slate-700 rounded-lg p-2.5">
+                  <div class="text-[11px] font-bold text-amber-300 mb-1">場景 1：最初 30 秒（建立首要印象）</div>
+                  <div class="text-xs text-rose-300 bg-rose-950/40 border border-rose-800/40 rounded p-1.5 mb-1.5">
+                    ❌ 「呃……今天簡報準備有點匆忙，大家隨便聽聽就好。」
+                  </div>
+                  <div class="text-xs text-emerald-300 bg-emerald-950/40 border border-emerald-800/40 rounded p-1.5">
+                    ⭕ 「各位夥伴早安！今天我想用接下來 20 分鐘，為大家徹底拆解一套能節省 50% 時間的工作法！」
+                  </div>
+                </div>
+
+                <!-- 面臨提問 -->
+                <div class="bg-slate-900/80 border border-slate-700 rounded-lg p-2.5">
+                  <div class="text-[11px] font-bold text-amber-300 mb-1">場景 2：面臨挑戰提問（展現底氣）</div>
+                  <div class="text-xs text-rose-300 bg-rose-950/40 border border-rose-800/40 rounded p-1.5 mb-1.5">
+                    ❌ 「這個……老實說我沒研究過，我不知道耶。」
+                  </div>
+                  <div class="text-xs text-emerald-300 bg-emerald-950/40 border border-emerald-800/40 rounded p-1.5">
+                    ⭕ 「這是一個非常切中核心的深刻提問！根據我目前的經驗，我們可以從兩個角度切入思考……」
+                  </div>
+                </div>
+
+                <!-- 收尾總結 -->
+                <div class="bg-slate-900/80 border border-slate-700 rounded-lg p-2.5">
+                  <div class="text-[11px] font-bold text-amber-300 mb-1">場景 3：收尾總結（留存核心記憶點）</div>
+                  <div class="text-xs text-rose-300 bg-rose-950/40 border border-rose-800/40 rounded p-1.5 mb-1.5">
+                    ❌ 「呃……時間差不多到了，我要講的就這樣，以上。」
+                  </div>
+                  <div class="text-xs text-emerald-300 bg-emerald-950/40 border border-emerald-800/40 rounded p-1.5">
+                    ⭕ 「今天的分享就一句話：『準備做足，緊張就是你的最佳燃料！』期待大家明天在各自崗位上大膽開口、發揮影響力！」
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- ============================================================
+               SLIDE 7: 登台前 15 分鐘的 4 大身心儀式
+               ============================================================ -->
+          <div class="swiper-slide">
+            <div class="slide-scroll-content">
+              <div class="mb-3">
+                <span class="text-[11px] font-mono font-bold text-emerald-400 tracking-wider">SECTION 03 ・ 生理調節</span>
+                <h2 class="text-xl sm:text-2xl font-black text-white leading-snug">
+                  把緊張轉化為燃料：<br><span class="gold-gradient-text">4 大登台前身心儀式</span>
+                </h2>
+                <div class="text-xs text-slate-400 mt-0.5">登台前 15 分鐘的神經科學調控指南</div>
+              </div>
+
+              <div class="grid grid-cols-1 gap-2.5">
+                <!-- 儀式 1: 生理重置 -->
+                <div class="card-glass p-3 flex items-start gap-3">
+                  <span class="text-2xl flex-shrink-0">🫁</span>
+                  <div>
+                    <div class="flex items-center gap-1.5">
+                      <span class="text-xs font-bold text-amber-300">01 生理重置</span>
+                      <span class="text-[10px] text-cyan-400">4-8 呼吸節奏</span>
+                    </div>
+                    <p class="text-xs text-slate-300 leading-relaxed mt-1">
+                      鼻子吸氣 <strong>4 秒</strong>，噘嘴緩慢吐氣 <strong>6～8 秒</strong>，循環 1 分鐘。Jordan Friedman 指出：長吐氣啟動副交感神經，迅速降低心率！
+                    </p>
+                  </div>
+                </div>
+
+                <!-- 儀式 2: 認知重構 -->
+                <div class="card-glass p-3 flex items-start gap-3">
+                  <span class="text-2xl flex-shrink-0">⚡</span>
+                  <div>
+                    <div class="flex items-center gap-1.5">
+                      <span class="text-xs font-bold text-amber-300">02 認知重構</span>
+                      <span class="text-[10px] text-cyan-400">焦慮 ＝ 燃料</span>
+                    </div>
+                    <p class="text-xs text-slate-300 leading-relaxed mt-1">
+                      告訴自己：心跳加速代表<strong>「身體已做好爆發準備」</strong>！William Arruda 建議將心悸解讀為高昂興奮感，導向講台感染力。
+                    </p>
+                  </div>
+                </div>
+
+                <!-- 儀式 3: 錨定儀式 -->
+                <div class="card-glass p-3 flex items-start gap-3">
+                  <span class="text-2xl flex-shrink-0">🎵</span>
+                  <div>
+                    <div class="flex items-center gap-1.5">
+                      <span class="text-xs font-bold text-amber-300">03 錨定儀式</span>
+                      <span class="text-[10px] text-cyan-400">專屬聽覺與嗅覺</span>
+                    </div>
+                    <p class="text-xs text-slate-300 leading-relaxed mt-1">
+                      固定聽同一首振奮歌曲；或聞固定氣味（如咖啡豆、薄荷）。利用古典條件反射建立神經錨點，信號一出大腦自動切換至平靜專注。
+                    </p>
+                  </div>
+                </div>
+
+                <!-- 儀式 4: 溫暖連結 -->
+                <div class="card-glass p-3 flex items-start gap-3">
+                  <span class="text-2xl flex-shrink-0">❤️</span>
+                  <div>
+                    <div class="flex items-center gap-1.5">
+                      <span class="text-xs font-bold text-amber-300">04 溫暖連結</span>
+                      <span class="text-[10px] text-cyan-400">人際感恩時刻</span>
+                    </div>
+                    <p class="text-xs text-slate-300 leading-relaxed mt-1">
+                      看一眼摯愛家人照片、傳訊息給摯友、或真誠感謝身旁工作人員。Gina Rapaport 指出：微小感恩時刻能讓神經系統切換至「安全歸屬感」。
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- ============================================================
+               SLIDE 8: 實戰倒數檢核清單 ＆ 總結金句
+               ============================================================ -->
+          <div class="swiper-slide">
+            <div class="slide-scroll-content">
+              <div class="mb-3">
+                <span class="text-[11px] font-mono font-bold text-amber-400 tracking-wider">CHECKLIST & SUMMARY</span>
+                <h2 class="text-xl sm:text-2xl font-black text-white leading-snug">
+                  實戰倒數清單 ＆<br><span class="gold-gradient-text">終局行動金句</span>
+                </h2>
+              </div>
+
+              <!-- 倒數檢核列表 -->
+              <div class="space-y-2 mb-3.5">
+                <div class="bg-slate-900/80 border border-slate-700/80 rounded-lg p-2.5 flex items-start gap-2.5">
+                  <span class="text-[10px] font-mono font-bold text-amber-300 bg-amber-500/20 px-1.5 py-0.5 rounded flex-shrink-0 mt-0.5">前 3 天</span>
+                  <div class="text-xs text-slate-200">完成結構化授課筆記，預先推演 3 個棘手提問。</div>
+                </div>
+
+                <div class="bg-slate-900/80 border border-slate-700/80 rounded-lg p-2.5 flex items-start gap-2.5">
+                  <span class="text-[10px] font-mono font-bold text-amber-300 bg-amber-500/20 px-1.5 py-0.5 rounded flex-shrink-0 mt-0.5">前 1 天</span>
+                  <div class="text-xs text-slate-200">腦中預演＋<strong>大聲出聲練習 2 遍</strong>＋敲定最初與最後一句。</div>
+                </div>
+
+                <div class="bg-slate-900/80 border border-slate-700/80 rounded-lg p-2.5 flex items-start gap-2.5">
+                  <span class="text-[10px] font-mono font-bold text-cyan-300 bg-cyan-500/20 px-1.5 py-0.5 rounded flex-shrink-0 mt-0.5">前 30 分</span>
+                  <div class="text-xs text-slate-200">提早到場，與台下 2～3 位聽眾破冰寒暄建立盟友。</div>
+                </div>
+
+                <div class="bg-slate-900/80 border border-slate-700/80 rounded-lg p-2.5 flex items-start gap-2.5">
+                  <span class="text-[10px] font-mono font-bold text-cyan-300 bg-cyan-500/20 px-1.5 py-0.5 rounded flex-shrink-0 mt-0.5">前 5 分鐘</span>
+                  <div class="text-xs text-slate-200">4-8 呼吸法調適 1 分鐘，大聲向自己正向喊話！</div>
+                </div>
+
+                <div class="bg-slate-900/80 border border-emerald-700/60 rounded-lg p-2.5 flex items-start gap-2.5">
+                  <span class="text-[10px] font-mono font-bold text-emerald-300 bg-emerald-500/20 px-1.5 py-0.5 rounded flex-shrink-0 mt-0.5">站上講台</span>
+                  <div class="text-xs text-slate-200">微笑環視全場，<strong>鎖定一位點頭盟友</strong>，自信開口！</div>
+                </div>
+              </div>
+
+              <!-- 名師終局金句框 -->
+              <div class="quote-box">
+                <div class="text-xs font-bold text-amber-300 mb-1">👑 名師終局金句</div>
+                <div class="text-xs sm:text-sm text-white font-medium leading-relaxed">
+                  「各位不需要變成不會緊張的人。真正重要的是做足周全準備，讓自己<strong>就算緊張也能勇敢把話說出來</strong>。下一次簡報前，請務必先決定好你的『第一句話』和『最後一句話』，抬頭挺胸站上舞台！」
+                </div>
+              </div>
+
+              <div class="mt-3 text-center">
+                <span class="text-[11px] text-slate-400">資料來源：經理人 Manager Today ｜ 木村教授</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </main>
+
+    <!-- ============================================================
+         底部 Footer (自然吸附，消除黑區留白)
+         ============================================================ -->
+    <footer id="main-footer">
+      <div class="swiper-pagination"></div>
+      <div class="flex items-center justify-between pt-1">
+        <button id="btn-prev" class="flex items-center space-x-1 px-3.5 py-1.5 rounded-lg bg-slate-800 text-slate-200 active:bg-slate-700 text-xs font-bold transition-opacity">
+          <span>‹ 上一頁</span>
+        </button>
+        <span class="text-[11px] text-slate-400 font-medium">左右滑動 • 可上下滾動</span>
+        <button id="btn-next" class="flex items-center space-x-1 px-3.5 py-1.5 rounded-lg bg-amber-500 text-slate-950 active:bg-amber-400 text-xs font-black shadow-lg shadow-amber-500/25 transition-all">
+          <span>下一頁 ›</span>
+        </button>
+      </div>
+    </footer>
+
+  </div>
+
+  <!-- Swiper.js 腳本 -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script>
+    const swiper = new Swiper(".mySwiper", {
+      direction: "horizontal",
+      loop: false,
+      speed: 320,
+      resistanceRatio: 0.85,
+      touchRatio: 1.2,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true
+      },
+      keyboard: {
+        enabled: true
+      },
+      on: {
+        init: function () {
+          updateUI(this);
+        },
+        slideChange: function () {
+          updateUI(this);
+        }
       }
     });
 
-    // 4. 全螢幕切換按鈕
-    const fullscreenBtn = document.getElementById('btn-toggle-fullscreen');
-    fullscreenBtn.addEventListener('click', toggleFullScreen);
-
-    function toggleFullScreen() {
-      if (!document.fullscreenElement) {
-        document.documentElement.requestFullscreen().catch(err => {
-          console.warn(`Error attempting to enable fullscreen: ${err.message}`);
-        });
+    function updateUI(s) {
+      const total = s.slides.length;
+      const current = s.activeIndex + 1;
+      document.getElementById('page-indicator').textContent = `${current} / ${total}`;
+      
+      const prevBtn = document.getElementById('btn-prev');
+      const nextBtn = document.getElementById('btn-next');
+      
+      if (current === 1) {
+        prevBtn.style.opacity = '0.35';
+        prevBtn.style.pointerEvents = 'none';
       } else {
-        if (document.exitFullscreen) {
-          document.exitFullscreen();
-        }
+        prevBtn.style.opacity = '1';
+        prevBtn.style.pointerEvents = 'auto';
       }
-    }
 
-    // 5. 講者計時器小工具 (Timer Capsule)
-    let timerInterval = null;
-    let timerSeconds = 0;
-    let isRunning = false;
-    const timerDisplay = document.getElementById('timer-display');
-    const timerStartBtn = document.getElementById('btn-timer-start');
-    const timerResetBtn = document.getElementById('btn-timer-reset');
-
-    function updateTimerUI() {
-      const mins = Math.floor(timerSeconds / 60);
-      const secs = timerSeconds % 60;
-      timerDisplay.textContent = `${mins.toString().padStart(2, '0')}:${secs.toString().padStart(2, '0')}`;
-    }
-
-    function toggleTimer() {
-      if (isRunning) {
-        clearInterval(timerInterval);
-        isRunning = false;
-        timerStartBtn.textContent = '▶';
+      if (current === total) {
+        nextBtn.innerHTML = '<span>回到首頁 ↺</span>';
+        nextBtn.classList.remove('bg-amber-500');
+        nextBtn.classList.add('bg-cyan-500');
       } else {
-        isRunning = true;
-        timerStartBtn.textContent = '❚❚';
-        timerInterval = setInterval(() => {
-          timerSeconds++;
-          updateTimerUI();
-        }, 1000);
+        nextBtn.innerHTML = '<span>下一頁 ›</span>';
+        nextBtn.classList.remove('bg-cyan-500');
+        nextBtn.classList.add('bg-amber-500');
       }
     }
 
-    function resetTimer() {
-      clearInterval(timerInterval);
-      isRunning = false;
-      timerSeconds = 0;
-      updateTimerUI();
-      timerStartBtn.textContent = '▶';
-    }
-
-    timerStartBtn.addEventListener('click', (e) => {
-      e.stopPropagation();
-      toggleTimer();
-    });
-
-    timerResetBtn.addEventListener('click', (e) => {
-      e.stopPropagation();
-      resetTimer();
-    });
-
-    // 6. 快捷鍵說明彈窗
-    const helpModal = document.getElementById('help-modal');
-    const showHelpBtn = document.getElementById('btn-show-help');
-    const closeHelpBtn = document.getElementById('btn-close-help');
-
-    showHelpBtn.addEventListener('click', () => {
-      helpModal.classList.add('open');
-    });
-
-    closeHelpBtn.addEventListener('click', () => {
-      helpModal.classList.remove('open');
-    });
-
-    helpModal.addEventListener('click', (e) => {
-      if (e.target === helpModal) {
-        helpModal.classList.remove('open');
-      }
-    });
-
-    // 7. 自訂鍵盤快捷鍵 (M = 目錄, T = 計時器, ? = 快捷鍵)
-    window.addEventListener('keydown', (e) => {
-      // 若在輸入框中則略過
-      if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA') return;
-
-      if (e.key === 'm' || e.key === 'M') {
-        drawer.classList.toggle('open');
-      } else if (e.key === 't' || e.key === 'T') {
-        toggleTimer();
-      } else if (e.key === '?' || (e.shiftKey && e.key === '/')) {
-        helpModal.classList.toggle('open');
-      } else if (e.key === 'Escape') {
-        if (drawer.classList.contains('open')) {
-          drawer.classList.remove('open');
-          e.stopPropagation();
-        }
-        if (helpModal.classList.contains('open')) {
-          helpModal.classList.remove('open');
-          e.stopPropagation();
-        }
+    document.getElementById('btn-prev').addEventListener('click', () => swiper.slidePrev());
+    document.getElementById('btn-next').addEventListener('click', () => {
+      if (swiper.activeIndex === swiper.slides.length - 1) {
+        swiper.slideTo(0);
+      } else {
+        swiper.slideNext();
       }
     });
   </script>
