@@ -6,7 +6,8 @@
 
 ## 🌐 線上投影簡報網址 (GitHub Pages)
 
-- **簡報連結**：[https://garfiwang.github.io/stage-presence-guide/](https://garfiwang.github.io/stage-presence-guide/)
+- **完整網址**：[https://garfiwang.github.io/stage-presence-guide/](https://garfiwang.github.io/stage-presence-guide/)
+- **精簡短網址**：[https://reurl.cc/GgyW1G](https://reurl.cc/GgyW1G)
 
 ---
 
